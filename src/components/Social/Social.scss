@@ -1,8 +1,14 @@
+@import '../../styles/mixins';
+
 .social {
+    margin: 0;
     color: grey;
+    padding-right: 1.25rem;
 
     &-container {
-        display: flex;
-        justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    background-color: $grey;
+    padding: .9375rem;
     }
 }

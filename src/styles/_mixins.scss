@@ -1,0 +1,22 @@
+$grey: #d9d9d9;
+
+//media breakpoint for mobile
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+}
+
+//media breakpoints for tablet */
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+}
+
+//media breakpoints for desktop 
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+    }
+}

@@ -12,7 +12,7 @@ function Social() {
     <div className="social">
       <p className="social-container">
         <a href="https://www.facebook.com/" className="facebook social">
-          <FontAwesomeIcon icon={faFacebook} size="2x" />
+          <FontAwesomeIcon icon={faFacebook} size="2x"  />
         </a>
         <a href="http://www.instagram.com/" className="instagram social">
           <FontAwesomeIcon icon={faInstagram} size="2x" />
