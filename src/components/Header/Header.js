@@ -7,7 +7,7 @@ function Header() {
   return (
     <section className="header">
       <div className="header-container">
-        <img className="header-img" src={logo} alt="lash-logo"></img>
+        <img className="header-img" src={logo} alt="lash-logo" className="header-logo"></img>
       </div>
       <div className="header-social">
 
