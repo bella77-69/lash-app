@@ -2,11 +2,14 @@
     margin: 0 auto;
 
     &-container {
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     }
 
+
     &-logo {
-    width: 30%;
+    width: 55%;
+    height: 20vh;
     }
 }
