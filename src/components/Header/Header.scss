@@ -1,0 +1,12 @@
+.header {
+    margin: 0 auto;
+
+    &-container {
+    width: 50%;
+    display: flex;
+    }
+
+    &-logo {
+    width: 30%;
+    }
+}
