@@ -5,13 +5,14 @@ import Header from './components/Header/Header';
 import Index from './pages/404';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
-
+import Nav from './components/Nav/Nav'
 function App() {
   return (
     <div className="App">
       {/* <Router > */}
        
       <Header />
+      <Nav />
       {/* <Switch > */}
       {/* <Route path="/" exact component={Home}/> */}
       <Hero />

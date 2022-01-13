@@ -29,16 +29,22 @@
     }
 
     &-img {
-    background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.1)), url('../../Assets/Images/hero.jpg');
+    background-image: linear-gradient(rgba($grey, 0.2), rgba($grey, 0.1)), url('../../Assets/Images/hero.jpg');
     width: 50%;
     background-size: contain;
     object-fit: cover;
     background-repeat: no-repeat;
     object-fit: cover;
+    height: 22vh;
+    margin: 0.5rem;
+    padding-right: 1rem;
 
         @include tablet {
-        background-image: linear-gradient(rgba($black, 0), rgba($black, 0)), url('../../Assets/Images/hero.jpg');
+        background-image: linear-gradient(rgba($grey, 0.1), rgba($grey, 0.2)), url('../../Assets/Images/hero.jpg');
         padding-right: .625rem;
+        border-radius: .625rem;
+        width: 51%;
+        height: auto;
         }
     }
 
