@@ -1,0 +1,15 @@
+@import '../../styles/mixins';
+
+.hero {
+    margin: 0 auto;
+
+    &-container {
+        width: 100%;
+        height: 45em;
+        display: flex;
+        background-image: linear-gradient(rgba($black, 0.5), rgba($black, 0.5)),url('../../Assets/Images/hero.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+}
