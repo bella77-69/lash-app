@@ -1,0 +1,21 @@
+@import '../../styles/mixins';
+
+.about {
+    margin: 0, auto;
+
+    &-container {
+    width: 75%;
+    color: $font;
+    display: flex;
+    flex-direction: row;
+    }
+
+    &-title {
+    width: 100%;
+    margin: 1rem;
+    }
+
+    &-section {
+    width: 55%;
+    }
+}

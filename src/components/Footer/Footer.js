@@ -28,7 +28,7 @@ function Footer() {
           <span className="footer-copyright"> - www.bellalashesinc.com</span>
         </div>
       </div>
-      <div className="footer-bottom"></div>
+      <div className="footer-bottom">Designed and Developed by Bella77-69</div>
       <div className="footer-copyright">© Bella Lashes Inc. 2018 - </div>
     </div>
   );

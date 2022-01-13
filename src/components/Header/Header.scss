@@ -4,12 +4,42 @@
     margin: 0 auto;
 
     &-container {
-    background-color: $grey;
-    margin-top: 1rem;
     width: 100%;
+    height: 10rem;
     display: flex;
     justify-content: center;
-    object-fit: contain;
+    background-color: $grey;
+    
+        @include tablet {
+        padding: 2rem;
+        height: 20.3125rem;
+        }
+
+        @include desktop {
+        height: 35rem;
+        }
+    }
+
+    &-logo {
+    background-image: url('../../Assets/Logo/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 50%;
+    }
+
+    &-img {
+    background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.1)), url('../../Assets/Images/hero.jpg');
+    width: 50%;
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+        @include tablet {
+        background-image: linear-gradient(rgba($black, 0), rgba($black, 0)), url('../../Assets/Images/hero.jpg');
+        padding-right: .625rem;
+        }
     }
 
     &-social {
