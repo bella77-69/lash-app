@@ -4,21 +4,22 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Index from './pages/404';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 
 function App() {
   return (
     <div className="App">
-      <Router >
+      {/* <Router > */}
        
       <Header />
-      <Switch >
+      {/* <Switch > */}
       {/* <Route path="/" exact component={Home}/> */}
       <Hero />
+    <About />
     
-    
-    </Switch>
+    {/* </Switch> */}
     <Footer />
-    </Router>
+    {/* </Router> */}
     </div>
   );
 }
