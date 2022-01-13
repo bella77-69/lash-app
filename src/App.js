@@ -6,6 +6,7 @@ import Index from './pages/404';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav'
+import Carousel  from './components/Carousel/Carousel';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       {/* <Switch > */}
       {/* <Route path="/" exact component={Home}/> */}
       <Hero />
+      <Carousel />
     <About />
     
     {/* </Switch> */}
