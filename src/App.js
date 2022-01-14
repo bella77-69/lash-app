@@ -11,14 +11,13 @@ import React from 'react';
 
 
 const images = [
-	'https://picsum.photos/400/300/?image=8',
-	'https://picsum.photos/400/300/?image=92',
-	'https://picsum.photos/400/300/?image=45',
-	'https://picsum.photos/400/300/?image=23',
-	'https://picsum.photos/400/300/?image=22',
-	'https://picsum.photos/400/300/?image=21',
+	'img-01.jpg',
+	'img-02.jpg',
+	'img-03.jpg',
+	'img-04.jpg',
+	'img-05.jpg',
+	'img-06.jpg',
 ];
-
 
 class App extends React.Component {
   render() {

@@ -2,15 +2,9 @@ import React from "react";
 import "./Carousel.scss";
 
 class Carousel extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      currentIndex: 0,
-      isTransitioning: false,
-      goingLeft: false,
-    };
-  }
+  state = {
+    currentIndex: 0,
+  };
 
   componentDidMount() {
     window.addEventListener("keyup", this.onKeyUp);
@@ -32,7 +26,7 @@ class Carousel extends React.Component {
 
   render() {
     const { images } = this.props;
-    const { currentIndex, isTransitioning, goingLeft } = this.state;
+    const { currentIndex } = this.state;
 
     return (
       <div className="carousel">
