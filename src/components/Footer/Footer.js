@@ -21,7 +21,7 @@ function Footer() {
         <div className="footer-language">
           <select className="footer-container">
             <option value="br">French - French</option>
-            <option value="en">EUA - English</option>
+            <option value="en">ENG - English</option>
           </select>
         </div>
         <div className="footer-bottom">

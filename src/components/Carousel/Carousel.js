@@ -1,31 +1,67 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './Carousel.scss';
+import './Carousel.scss'
 
-export default function CarouselComponent() {
-  return (
-    <div className="carousel">
-      <Carousel>
-        <div className="carousel-wrapper">
-          <img src="../img-01.jpg" className="carousel-img" alt="carousel-img"/>
-        </div>
-        <div className="carousel-wrapper" >
-          <img src="../img-02.jpg" alt="carousel-img"/>
-        </div>
-        <div className="carousel-wrapper" >
-          <img src="../img-03.jpg" alt="carousel-img"/>
-        </div>
-        <div className="carousel-wrapper" >
-          <img src="../img-04.jpg" alt="carousel-img"/>
-        </div>
-        <div className="carousel-wrapper" >
-          <img src="../img-05.jpg" alt="carousel-img"/>
-        </div>
-        {/* <div className="carousel-wrapper" >
-          <img src="../img-06.jpg" alt="carousel-img"/>
-        </div> */}
-      </Carousel>
-    </div>
-  );
+class Carousel extends React.Component {
+	constructor() {
+		super();
+		
+		this.state = {
+			currentIndex: 0,
+			isTransitioning: false,
+			goingLeft: false
+		};
+	}
+	
+	componentDidMount() {
+		window.addEventListener('keyup', this.onKeyUp);
+	}
+	
+	componentWillUnmount() {
+		window.removeEventListener('keyup', this.onKeyUp);
+	}
+	
+	onKeyUp = (e) => {
+		if (e.keyCode) {
+			if (e.keyCode === 39) {
+				this.showNextSet();
+			} else if (e.keyCode === 37) {
+				this.showPrevSet();
+			}
+		}
+	}
+
+	render() {
+
+		const { images } = this.props;
+		const { currentIndex, isTransitioning, goingLeft } = this.state;
+		
+    return (
+			<div className="carousel">
+				<div className="carousel-container">
+					{images.map((img, index) => {
+						let className = 'carousel-image'
+						if (index === currentIndex) className += '-active';
+						
+						return <img src={img} className={className} key={`img-${index}`} />;
+					})}
+				</div>
+				<div className="carousel-controls">
+					<button className="carousel-button" onClick={this.showPrevSet}>Prev<i className="fa fa-arrow-left"></i></button>
+					<button className="carousel-button" onClick={this.showNextSet}>Next<i className="fa fa-arrow-right"></i></button>
+				</div>
+			</div>
+		);
+	}
+	
+	showPrevSet = () => {
+		const currentIndex = (this.state.currentIndex - 1 + this.props.images.length) % this.props.images.length;
+		this.setState({ currentIndex });
+	}
+	
+	showNextSet = () => {
+		const currentIndex = (this.state.currentIndex + 1) % this.props.images.length;
+		this.setState({ currentIndex });
+	}
 }
+
+export default Carousel;
