@@ -2,6 +2,8 @@ $grey: #d9d9d9;
 $font: #737373;
 $black: #000;
 
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Satisfy&display=swap');
+
 //media breakpoint for mobile
 @mixin mobile {
     @media screen and (max-width: 767px) {

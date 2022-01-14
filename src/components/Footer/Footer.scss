@@ -1,0 +1,17 @@
+@import '../../styles/mixins';
+
+.footer {
+    margin: 0, auto;
+
+    &-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    color: $font;
+    }
+}

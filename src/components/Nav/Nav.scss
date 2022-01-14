@@ -12,10 +12,18 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
+    width: .875rem;
+    height: .8125rem;
+    left: 1.0625rem;
+    top: 1.125rem;
+
+      @include tablet {
+        position: fixed;
+        width: 2.25rem;
+        height: 1.875rem;
+        left: 2.25rem;
+        top: 2.25rem;
+      }
   }
   
   /* Color/shape of burger icon bars */
