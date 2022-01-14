@@ -4,18 +4,20 @@
     margin: 0, auto;
 
     &-container {
-    width: 75%;
+    width: 100%;
     color: $font;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     }
 
     &-title {
     width: 100%;
-    margin: 1rem;
+    margin-left: 2.5rem;
     }
 
     &-section {
-    width: 55%;
+    width: 90%;
+    margin: 1rem;
     }
 }

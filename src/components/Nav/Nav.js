@@ -17,7 +17,7 @@ class Nav extends React.Component {
           <a id="about" className="menu-item" href="/about">
             About
           </a>
-          <a id="services" className="menu-item" href="/contact">
+          <a id="services" className="menu-item" href="/services">
             Services
           </a>
           <a id="contact" className="menu-item" href="/contact">

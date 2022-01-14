@@ -2,4 +2,23 @@
 
 .carousel {
     margin: 0;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // width: 100%;
+
+    &-wrapper {
+    // width: 70%;
+    display: flex;
+    margin-left: 8rem;
+    padding-top: 2.5rem;
+    }
+
+   
+}
+
+.carousel-root {
+    // width: 60%;
+    // display: flex;
+    // flex-wrap: wrap;
 }
