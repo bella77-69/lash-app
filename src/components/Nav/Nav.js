@@ -1,6 +1,7 @@
 import { slide as Menu } from "react-burger-menu";
 import React from "react";
 import "./Nav.scss";
+import { NavLink } from 'react-router-dom';
 
 class Nav extends React.Component {
   showSettings(event) {
@@ -11,21 +12,20 @@ class Nav extends React.Component {
     return (
       <section className="menu">
         <Menu>
-          <a id="home" className="menu-item" href="/">
-            Home
+          <NavLink to="/" className="menu-item">Home</NavLink>
+       
+          <NavLink to='/about' className="menu-item">About</NavLink>
+       
+          <NavLink to='/services' className="menu-item">Services</NavLink>
+         
+          <NavLink to='/contact' className="menu-item">Contact</NavLink>
+        
+           <a onClick={this.showSettings} className="menu-item--small" href="">
+           Login
+          </a> 
+          <a onClick={this.showSettings} className="menu-item--small" href="">
+            Signup
           </a>
-          <a id="about" className="menu-item" href="/about">
-            About
-          </a>
-          <a id="services" className="menu-item" href="/services">
-            Services
-          </a>
-          <a id="contact" className="menu-item" href="/contact">
-            Contact
-          </a>
-          {/* <a onClick={this.showSettings} className="menu-item--small" href="">
-            Contact
-          </a> */}
         </Menu>
       </section>
     );
