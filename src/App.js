@@ -2,13 +2,13 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import Index from './pages/404';
+import NotFound from './pages/404/NotFound';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav'
 import Carousel  from './components/Carousel/Carousel';
 import React from 'react';
-
+import Home from './pages/Home/Home';
 
 const images = [
 	'img-01.jpg',
@@ -23,19 +23,21 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      {/* <Router > */}
+      <Router >
        
       <Header />
       <Nav />
+      <Switch>
+      <Route path="/"exact component={Home}/>
       {/* <Switch > */}
       {/* <Route path="/" exact component={Home}/> */}
-      <Hero />
+      {/* <Hero />
       <Carousel images={images}/>
-    <About />
+    <About /> */}
     
-    {/* </Switch> */}
+    </Switch>
     <Footer />
-    {/* </Router> */}
+    </Router>
     </div>
   );
 }
