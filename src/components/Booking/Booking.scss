@@ -1,0 +1,127 @@
+#BookingPage{
+    position: absolute;
+    padding: 1%;
+    left:2%;
+    right:2%;
+    height:120%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#BookingPage .left{
+    padding:1%;
+    max-width: 380px;
+    width:27%;
+    height:100%;
+    float:left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+#BookingPage .calendar-inner{
+    height:auto;
+    margin:auto;
+    width:100%;
+    border-style: none;
+
+}
+.react-calendar__navigation button:disabled{
+    background-color:transparent;
+}
+#BookingPage  .calendar-inner-tile{
+    font-size: 1.3vh;
+    height:100%;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.calendar-inner button{
+    min-width: 20px;
+    width:20%;
+}
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus,.react-calendar__tile--active{
+    background:gray;
+}
+.react-calendar__tile:disabled{
+    color:gray;
+    background-color:transparent;
+}
+#BookingPage .MyReservation{
+    margin-top:5%;
+    margin-bottom:5%;
+    position: relative;
+    font-size:1vh;
+    width:100%;
+    height:70%;
+    
+}
+#BookingPage .MyReservation h4{
+    margin-top: 5%;
+}
+#BookingPage .MyReservation .MyReservation-reservations{
+    position: relative;
+    height:40%;
+    overflow:scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#BookingPage .MeetingRooms{
+    width:70%;
+    min-width: calc(95% - 380px);
+    height:100%;
+    float:right;
+    position: relative;
+}
+
+
+
+#BookingPage .MeetingRooms #Pagination-block{
+    display: flex;
+    justify-content:center;
+    bottom: 0;
+    position: absolute;
+    
+}
+
+
+
+
+#BookingPage .MeetingRooms .room-grid{
+ 
+    width:32%;
+    margin-bottom: 20px;
+}
+#BookingPage  td{
+    padding-right:2%;
+}
+
+#BookingPage table{
+    width:100%;
+}
+
+#BookingPage #reseration-record {
+    margin:5% 5%;
+}
+#BookingPage .MeetingRooms #CardDeck{
+    padding:5%;
+    padding-top:2%;
+    font-size:1.7vh;
+    display: flex;
+    width:100%;
+    justify-content:center;
+}
+
+#BookingPage .MeetingRooms #CardDeck .card-body{
+    font-size:1vw;   
+    padding:0;
+    margin:5%;
+}
+
+.card-footer{
+    padding:0;
+    background-color: transparent;
+    border-top:none;
+}
+
+

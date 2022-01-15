@@ -10,7 +10,8 @@ import About from "./components/About/About";
 import Contact from './components/Contact/Contact';
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Login/Signup";
-
+import Services from "./components/Services/Services";
+import Booking from "./components/Booking/Booking";
 
 class App extends React.Component {
   render() {
@@ -21,8 +22,9 @@ class App extends React.Component {
           <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
-            {/* <Route path="/services" component={Services}/> */}
+            <Route path="/services" component={Services}/>
             <Route path="/about" component={About} />
+            <Route ptah="/book-appointment" component={Booking}/>
             <Route path="/contact" exact component={Contact}/>
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup}/>
