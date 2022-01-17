@@ -1,75 +1,51 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import { PostData } from "../../services/PostData";
+import React, { useState } from 'react';
+import './Login.scss';
+import PropTypes from 'prop-types';
 
-class Login extends Component {
-  constructor() {
-    super();
+async function loginUser(credentials) {
+  return fetch('http://localhost:8080/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+ }
 
-    this.state = {
-      username: "",
-      password: "",
-      redirectToReferrer: false,
-    };
+export default function Login( {setToken} ) {
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
 
-    this.login = this.login.bind(this);
-    this.onChange = this.onChange.bind(this);
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
   }
 
-  login() {
-    if (this.state.username && this.state.password) {
-      PostData("login", this.state).then((result) => {
-        let responseJson = result;
-        if (responseJson.userData) {
-          sessionStorage.setItem("userData", JSON.stringify(responseJson));
-          this.setState({ redirectToReferrer: true });
-        }
-      });
-    }
-  }
-
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
-
-  render() {
-    if (this.state.redirectToReferrer) {
-      return <Redirect to={"/"} />;
-    }
-
-    if (sessionStorage.getItem("userData")) {
-      return <Redirect to={"/"} />;
-    }
-
-    return (
-      <div className="row" id="Body">
-        <div className="medium-5 columns left">
-          <h4>Login</h4>
-          <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            onChange={this.onChange}
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={this.onChange}
-          />
-          <input
-            type="submit"
-            className="button success"
-            value="Login"
-            onClick={this.login}
-          />
-          <a href="/signup">Registration</a>
+  return(
+    <div className="login-wrapper">
+      <h1>Please Log In</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <p>Username</p>
+          <input type="text" onChange={e => setUserName(e.target.value)} />
+        </label>
+        <label>
+          <p>Password</p>
+          <input type="password" onChange={e => setPassword(e.target.value)} />
+        </label>
+        <div>
+          <button type="submit">Submit</button>
         </div>
-      </div>
-    );
-  }
+      </form>
+    </div>
+  )
 }
 
-export default Login;
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}
