@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import Hero from "../../components/Hero/Hero";
 
-
 const images = [
   "img-01.jpg",
   "img-02.jpg",
@@ -18,7 +17,6 @@ class Home extends Component {
       <div className="row " id="Body">
         <Hero />
         <Carousel images={images} />
-    
       </div>
     );
   }

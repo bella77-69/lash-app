@@ -1,11 +1,11 @@
-export function PostData(type, userData) {
-    let BaseURL = 'https://api.thewallscript.com/restful/';
+export function PostData(userData) {
+    let BaseURL = 'http://localhost:/5000/appointment';
     //let BaseURL = 'http://localhost/PHP-Slim-Restful/api/';
 
     return new Promise((resolve, reject) =>{
     
          
-        fetch(BaseURL+type, {
+        fetch(BaseURL, {
             method: 'POST',
             body: JSON.stringify(userData)
           })

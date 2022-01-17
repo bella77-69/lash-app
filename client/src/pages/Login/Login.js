@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { PostData } from "../../services/PostData";
 
-
 class Login extends Component {
   constructor() {
     super();
@@ -35,11 +34,11 @@ class Login extends Component {
 
   render() {
     if (this.state.redirectToReferrer) {
-      return <Redirect to={"/home"} />;
+      return <Redirect to={"/"} />;
     }
 
     if (sessionStorage.getItem("userData")) {
-      return <Redirect to={"/home"} />;
+      return <Redirect to={"/"} />;
     }
 
     return (
