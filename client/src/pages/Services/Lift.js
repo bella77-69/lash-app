@@ -20,12 +20,20 @@ function Lift(props) {
         </p>
       </div>
       <div>
-      <p>
-        <Link to="/">Back to Homepage</Link>.
-      </p>
-      <p>
-        <Link to="/services">Back to Services Page</Link>.
-      </p>
+        <p>
+          Lash Filler (Lift) is an innovative process that thickens the hair up
+          to 24% while giving it an amazing lift and curl - add tint to darken
+          the lashes. The highest quality products made in Italy give natural
+          lashes beautiful curl and nourishment.
+        </p>
+      </div>
+      <div>
+        <p>
+          <Link to="/">Back to Homepage</Link>.
+        </p>
+        <p>
+          <Link to="/services">Back to Services Page</Link>.
+        </p>
       </div>
       <div>
         <FaqLift />

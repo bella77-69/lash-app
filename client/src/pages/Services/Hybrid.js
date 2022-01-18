@@ -19,12 +19,21 @@ function Hybrid(props) {
         </p>
       </div>
       <div>
-      <p>
-        <Link to="/">Back to Homepage</Link>.
-      </p>
-      <p>
-        <Link to="/services">Back to Services Page</Link>.
-      </p>
+        <p>
+          Not ready to go Full Volume? The fluffiness and richness of Russian
+          Volume lashes blended with the simplicity, darkness and length of
+          Classic lashes. Best for textured, full sets that aren't overly
+          dramatic. The best of both worlds. Consultation to determine your
+          desired look is included in the appointment.
+        </p>
+      </div>
+      <div>
+        <p>
+          <Link to="/">Back to Homepage</Link>.
+        </p>
+        <p>
+          <Link to="/services">Back to Services Page</Link>.
+        </p>
       </div>
       <div>
         <Faq />

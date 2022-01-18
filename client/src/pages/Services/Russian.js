@@ -9,13 +9,14 @@ function Russian(props) {
       <div className="lash-container">
         <h2 className="lash-title">What are Hybrid Lash Extensions?</h2>
         <p className="lash-about">
-          It’s called Hybrid because it blends the fluffiness and richness of
-          Russian Volume with the darkness and length of Classic lashes. Hybrid
-          is a very versatile style and can go more natural, or more dramatic;
-          more textured, or more simple. If you’re not ready to go full Volume
-          with your lashes, Hybrid would be your best bet for a slightly fuller
-          than natural-looking set with more density and texture than Classic
-          lash extensions.
+          Craving something more? Russian Volume is a technique where multiple
+          ultra-fine lashes are applied to your natural lashes, giving a look
+          full of dimension and texture. Skillfully applied fans of 3-5
+          ultra-lightweight lashes are attached to each of your natural lashes,
+          creating a fluffy, dark, luscious set of lashes. Volume lashes can be
+          made to be more subtle and natural, or intense and dramatic.
+          Consultation to determine your desired look is included in the
+          appointment.
         </p>
       </div>
       <div>
