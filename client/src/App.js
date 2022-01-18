@@ -12,7 +12,7 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Login/Signup";
 // import Services from "./components/Services/Services";
 import BookingForm from "./components/Booking/BookingForm";
-
+import ResetPassword from "./pages/Login/ResetPassword";
 class App extends React.Component {
   render() {
     return (
@@ -27,6 +27,7 @@ class App extends React.Component {
             <Route path="/book-appointment" exact component={BookingForm} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" exact component={Login} />
+            <Route path="/reset-password" component={ResetPassword} />
             <Route path="/signup" exact component={Signup} />
           </Switch>
           <Footer />
