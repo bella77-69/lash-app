@@ -8,9 +8,9 @@ import React from "react";
 import Home from "./pages/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import AppLogin from "./pages/Login/AppLogin";
-// import Signup from "./pages/Login/Signup";
-import Services from "./components/Services/Services";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Login/Signup";
+// import Services from "./components/Services/Services";
 import BookingForm from "./components/Booking/BookingForm";
 
 class App extends React.Component {
@@ -26,8 +26,8 @@ class App extends React.Component {
             <Route path="/about" exact component={About} />
             <Route path="/book-appointment" exact component={BookingForm} />
             <Route path="/contact" exact component={Contact} />
-            <Route path="/login" exact component={AppLogin} />
-            {/* <Route path="/signup" exact component={Signup} /> */}
+            <Route path="/login" exact component={Login} />
+            <Route path="/signup" exact component={Signup} />
           </Switch>
           <Footer />
         </Router>
