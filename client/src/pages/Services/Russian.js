@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Faq from "../../components/FAQ/Faq";
 
-function Hybrid(props) {
+function Russian(props) {
   return (
     <section className="lash">
       Hybrid Lashes
@@ -19,12 +19,12 @@ function Hybrid(props) {
         </p>
       </div>
       <div>
-      <p>
-        <Link to="/">Back to Homepage</Link>.
-      </p>
-      <p>
-        <Link to="/services">Back to Services Page</Link>.
-      </p>
+        <p>
+          <Link to="/">Back to Homepage</Link>.
+        </p>
+        <p>
+          <Link to="/services">Back to Services Page</Link>.
+        </p>
       </div>
       <div>
         <Faq />
@@ -33,4 +33,4 @@ function Hybrid(props) {
   );
 }
 
-export default Hybrid;
+export default Russian;
