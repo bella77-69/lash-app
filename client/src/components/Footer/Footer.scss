@@ -1,95 +1,7 @@
 @import '../../styles/mixins';
 
-// .article, footer,  section {
-//     display: block;
-//     background-color: $grey;
-// }
-// .footer {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 1fr .25fr;
-//     margin-top: 1rem;
-//     padding: 5rem;
-    
-// &-title{
-//   color: $font;
-//   line-height: 1;
-//   text-align: center;
-//   }
-
-//   &-top {
-//   font-size: 1.6rem;
-//   }
- 
-//   &-bottom {
-//   font-size: 1.6rem;
-//   }
-
-//   &-info{
-//   line-height: 1.4;
-//   letter-spacing: .0625rem;
-//   font-weight: 600;
-//   font-size: 1.25rem;
-//   color:$font;
-//   width: 45em;
-//   text-align: center;
-//   }
-
-//   &-copy {
-//   font-size: 70%;
-//   font-weight: 300;
-//   padding-top: 1rem;
-//   margin-left: 2rem;
-//   }
-
-//   &-list{
-//   font-weight: 300;
-//   line-height: 1.5;
-//   list-style-type: none;
-//   }
-//   &-a{
-//   color: $font;
-//   text-decoration: none;
-//   }
-
-//  &-contactInfo {
-//   background-color: $grey;
-//   color:$font;
-//   padding: 1rem 1rem 0;
-//   text-align: center;
-//   font-size: 1.6rem;
-//   line-height: 1;
-//   }
-  
-//   &-social{
-//   border-bottom: solid 1px $underline ;
-//   font-weight: 400;
-//   padding-bottom: .25rem;
-//   font-size: 1.6rem; 
-//   }
-  
-//   &-socialIcons {
-//   font-size: 200%;
-//   padding: 1rem 0;
-//   text-align: center;
-
-//   &:hover {
-//   color: #181511;
-//   }
-//   }
-//  &-article {
-//   border-top: solid 1px $underline;
-//   padding: 1rem 0;
-//   }
-
-//   &-googlemaps {
-//   margin-left: 6rem;
-//   }
-// }
-
-
 .footer{
-	background: #666;
+	background: $grey;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -97,28 +9,30 @@
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
 
-  /* Footer left */
-
 &-left{
 	width: 40%;
   display: inline-block;
 	vertical-align: top;
+  margin-left: 5rem;
 }
 
-/* The company logo */
-
 &-logo{
-	color:  #ffffff;
+	color:  #b3adad;
 	font: normal 36px 'Open Sans', cursive;
 	margin: 0;
 
-
 &__span{
-	color:  lightseagreen;
+	color: $highlight;
 }
 }
 
-/* Footer links */
+&-img {
+  margin: 0;
+
+  @include desktop {
+    margin-left: 2rem;
+  }
+}
 
 &-links{
 	color:  #ffffff;
@@ -126,31 +40,32 @@
 	padding: 0;
 }
 
-// .footer.footer-links a{
-// 	display:inline-block;
-// 	line-height: 1.8;
-//   font-weight:400;
-// 	text-decoration: none;
-// 	color:  inherit;
-// }
-
 &-company{
-	color:  #222;
-	font-size: 14px;
+	color:  $font;
+	font-size: 1rem;
 	font-weight: normal;
-	margin: 0;
+	
+  font-style: italic;
+
+  @include desktop {
+    margin-left: 1rem;
+  }
 }
 
-/* Footer Center */
 &-center {
   display: inline-block;
 	vertical-align: top;
   width: 35%;
+
+  @include desktop {
+    margin: 0;
+    
+  }
 }
 
 &-info{
 	display: inline-block;
-	color: #ffffff;
+	color: $font;
   font-weight:400;
 	vertical-align: middle;
 	margin: .75rem;
@@ -164,22 +79,20 @@
 }
 
 &-contact{
-	color:  lightseagreen;
+	color:  $highlight;
 	text-decoration: none;;
 }
-
-
-/* Footer Right */
 
 &-right{
 	width: 20%;
   display: inline-block;
 	vertical-align: top;
+  
 }
 
 &-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  $span;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -187,13 +100,12 @@
 
 &-questions{
 	display: block;
-	color:  #ffffff;
+	color:  $font;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
-/* Social */
 &-social{
 	margin-top: 25px;
 
@@ -202,7 +114,7 @@
     width: 35px;
     height: 35px;
     cursor: pointer;
-  	background-color:  #33383b;
+  	background-color: $background;
     border-radius: 5px;
   
     font-size: 20px;
@@ -216,52 +128,7 @@
 }
 }
 
-/* Footer Center */
-
-// .footer .footer-center i{
-// 	background-color:  #33383b;
-// 	color: #ffffff;
-// 	font-size: 25px;
-// 	width: 38px;
-// 	height: 38px;
-// 	border-radius: 50%;
-// 	text-align: center;
-// 	line-height: 42px;
-// 	margin: 10px 15px;
-// 	vertical-align: middle;
-// }
-
-// .footer .footer-center i.fa-envelope{
-// 	font-size: 17px;
-// 	line-height: 38px;
-// }
-
-
-
-
-
-
-
-.footer .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer .footer-links .link-1:before {
-  content: none;
-}
-
-@media (max-width: 880px) {
-
-	.footer{
-		font: bold 14px sans-serif;
-	}
-
+@media (max-width: 1280px) {
 	.footer .footer-left,
 	.footer .footer-center,
 	.footer .footer-right{
@@ -270,9 +137,4 @@
 		margin-bottom: 40px;
 		text-align: center;
 	}
-
-	.footer .footer-center i{
-		margin-left: 0;
-	}
-
 }

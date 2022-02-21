@@ -14,7 +14,7 @@ function Footer() {
         </h3>
 
         <p class="footer-links">
-          <img src={logo} alt="footer-logo" />
+          <img src={logo} alt="footer-logo" className="footer-img"/>
           {/* <a href="#" class="link-1">Home</a>
     
     <a href="#">Blog</a>
