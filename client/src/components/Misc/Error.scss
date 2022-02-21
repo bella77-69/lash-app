@@ -1,0 +1,19 @@
+@import '../../styles/mixins';
+
+.error {
+    margin: 0 auto;
+
+    &-message {
+    margin-left: 2rem;
+    font-size: .875rem;
+    color: red;
+    }
+
+    &-btn {
+    margin-left: .35rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    color: red;
+    }
+}

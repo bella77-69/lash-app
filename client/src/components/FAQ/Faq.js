@@ -1,12 +1,12 @@
 import React from "react";
-
+import Title from "../Title/Title";
+import { Link } from "react-router-dom";
 function Faq() {
   return (
     <section className="faq">
       <div className="faq-container">
-        <h3 className="faq-question one">
-          Can I get my eyelash extensions wet right away?
-        </h3>
+        <Title title=" Can I get my eyelash extensions wet right away?" />
+
         <p className="faq-answer one">
           It’s not ideal, but it’s okay to get your extensions wet in the first
           24 hours. However, avoid high temperatures like a hot shower or hot
@@ -15,9 +15,8 @@ function Faq() {
         </p>
       </div>
       <div className="faq-container">
-        <h3 className="faq-question two">
-          How do I clean my eyelash extensions?
-        </h3>
+        <Title title="How do I clean my Eyelash" />
+
         <p className="faq-answer two">
           Clean your extensions and eyelids gently, as instructed by your lash
           technician, and use a designated lash cleanser. Oils from skin or
@@ -28,9 +27,8 @@ function Faq() {
         </p>
       </div>
       <div className="faq-container">
-        <h3 className="faq-question three">
-          How long do eyelash extensions last?
-        </h3>
+        <Title title="How long do Eyelash Extensions Last?" />
+
         <p className="faq-answer three">
           It depends. Factors like your natural growth cycle, cosmetics, oily
           skin, sleeping on your side, hormonal changes, stress and more factors
@@ -40,9 +38,8 @@ function Faq() {
         </p>
       </div>
       <div className="faq-container">
-        <h3 className="faq-question four">
-          Are there any products I shouldn't use on my lash extensions?
-        </h3>
+        <Title title="Are there any products I shouldn't use on my lash extensions?" />
+
         <p className="faq-answer four">
           Keep oil-based products away from direct contact with your extensions
           and limit the use of oil-based products on your face and hair as much
@@ -51,12 +48,20 @@ function Faq() {
         </p>
       </div>
       <div className="faq-container">
-        <h3 className="faq-question five">
-          Can I remove my lash extensions myself?
-        </h3>
+        <Title title="Can I remove my Lash Extensions myself?" />
+
         <p className="faq-answer five">
           Always return to your technician for removal or let them grow out
           naturally. Never attempt to remove the extensions yourself.
+        </p>
+      </div>
+
+      <div>
+        <p>
+          <Link to="/">Back to Homepage</Link>.
+        </p>
+        <p>
+          <Link to="/services">Back to Services Page</Link>.
         </p>
       </div>
     </section>

@@ -1,0 +1,43 @@
+@import '../../styles/mixins';
+
+.lash {
+    margin: 0, auto;
+
+    &-container {
+    //box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s linear;
+
+    :hover {
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+    }
+
+    &-img {
+    position: relative;
+    display: block;
+    transition:all 0.3s linear;
+    }
+
+    &-image {
+    display: block;
+    transition:all 0.3s linear;
+    }
+
+    &-faq {
+    text-align: center;
+    }
+    &-btn {
+    text-decoration: none;
+    border: 2px solid $font;
+    background-color: #bbb;
+    padding: 0 1.5rem 0;
+    border-radius: .5rem;
+    box-shadow : 0 1px 1px rgba(black, 0.1);
+
+    &:hover {
+    color: #fff;
+    text-decoration: none;
+    }
+}
+    
+}

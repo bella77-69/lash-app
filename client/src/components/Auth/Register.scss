@@ -1,0 +1,66 @@
+@import '../../styles/mixins';
+
+.register {
+    margin: 0 auto;
+
+    &-title {
+    font-size: .875rem;
+    margin-left: 1.5rem;
+    font-weight: lighter;
+
+        @include desktop {
+        font-size: 1.312rem;
+        }
+    }
+    &-form {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+        @include desktop {
+        width: 50%;
+        }
+    }
+    
+    &-label {
+    font-size: .75rem;
+    padding: .5rem 0 .5rem;
+
+        @include desktop {
+        font-size: 1.125rem;
+        }
+    }
+    
+    &-input {
+    font-size: .6875rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    width: 90%;
+    background-color: $grey;
+    margin-bottom: 10px;
+
+        @include desktop {
+        font-size: 1rem;   
+        }
+    }
+    
+    &-btn {
+    font-size: .6875rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    width: 90%;
+    margin-top: 1rem;
+
+        @include desktop {
+        font-size: 1rem;
+        }
+
+    &:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    }
+    }
+}

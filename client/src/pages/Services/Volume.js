@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Faq from "../../components/FAQ/Faq";
+import Title from "../../components/Title/Title";
 
 function Volume(props) {
   return (
     <section className="lash">
-      Volume Lashes
+      <Title title="Volume Lashes" />
       <div className="lash-container">
-        <h2 className="lash-title">What are Volume Lash Extensions?</h2>
+        <Title title="What are Volume Lash Extensions?" />
         <p className="lash-about">
           Volume is the technique of applying two or more extensions per natural
           eyelash. This allows a trained lash artist to custom create almost any
@@ -39,8 +39,10 @@ function Volume(props) {
           <Link to="/services">Back to Services Page</Link>.
         </p>
       </div>
-      <div>
-        <Faq />
+      <div className="lash-faq">
+        <Link to="/services/faq" className="lash-btn">
+          Faq{" "}
+        </Link>
       </div>
     </section>
   );

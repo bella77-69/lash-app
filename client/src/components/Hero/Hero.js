@@ -10,3 +10,15 @@ function Hero() {
 }
 
 export default Hero;
+
+// import React from "react";
+
+// const Hero = ({ children, hero }) => {
+//   return <header className='hero'></header>;
+// };
+
+// export default Hero;
+
+// Hero.defaultProps = {
+//   hero: "defaultHero",
+// };

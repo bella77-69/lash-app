@@ -1,23 +1,62 @@
 @import '../../styles/mixins';
 
 .about {
-    margin: 0, auto;
+    margin: 0 auto;
+    padding-bottom: 2rem;
 
-    &-container {
+    &-wrapper {
+    display:grid;
+    gap: 2rem;
+    
+    @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    }
+    }
+
+    &-img {
     width: 100%;
-    color: $font;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    object-fit: contain;
+        
+        @include tablet {
+        width: 99%;
+        margin-left: .25rem;
+        }
+
+        @include desktop {
+        margin-top: 4rem;
+        }
     }
 
     &-title {
-    width: 100%;
-    margin-left: 2.5rem;
+    text-align: center;
+    margin-top: -2rem;
+       
+        @include desktop {
+        margin-top: 4rem;
+        }
     }
 
-    &-section {
-    width: 90%;
-    margin: 1rem;
-    }
+    &-details {
+    line-height: 1.5;
+    margin: .3125rem;
+    color: $font;
+    font-size: 1rem;
+
+        @include tablet {
+        line-height: 1.75;
+        font-size: 1.125rem;
+        margin: 1rem;
+        }
+
+        @include desktop {
+        line-height: 2;
+        max-width: 45em;
+        margin: 0 auto;
+        margin-top: .5rem;
+        font-size: 1.25rem;
+        }
+      }
 }

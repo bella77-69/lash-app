@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Faq from "../../components/FAQ/Faq";
+import Title from "../../components/Title/Title";
 
 function Russian(props) {
   return (
     <section className="lash">
-      Hybrid Lashes
+      <Title title="Russian Lashes" />
       <div className="lash-container">
-        <h2 className="lash-title">What are Hybrid Lash Extensions?</h2>
+        <Title title="What are Russian Lash Extensions?" />
         <p className="lash-about">
           Craving something more? Russian Volume is a technique where multiple
           ultra-fine lashes are applied to your natural lashes, giving a look
@@ -27,8 +27,11 @@ function Russian(props) {
           <Link to="/services">Back to Services Page</Link>.
         </p>
       </div>
-      <div>
-        <Faq />
+
+      <div className="lash-faq">
+        <Link to="/services/faq" className="lash-btn">
+          Faq{" "}
+        </Link>
       </div>
     </section>
   );

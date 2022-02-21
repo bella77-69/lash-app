@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState} from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import PageHero from "../Hero/PageHero";
 import "./Booking.scss";
 import TimeSlot from "./TimeSlot";
 
+
 export default function Form() {
-  const [roomName, setLashName] = useState("");
+  const [lashName, setLashName] = useState("");
   const [userName, setuserName] = useState("");
   const [description, setDescription] = useState("");
   const [selectDate, setSelectDate] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [success, setSuccess] = useState(false);
+
   const successMessage = () => {
 
     return (
@@ -41,16 +44,18 @@ export default function Form() {
   };
   return (
     <>
+    <PageHero title='booking'/>
       <div className="booking">
         <div className="booking-container">
           <h5 className="booking-title">Booking</h5>
+      
           <form className="booking-form">
             <div className="booking-form__container">
               <select
                 className="booking-select"
                 placeholder="Select Service"
                 aria-label="Select Service"
-                value={roomName}
+                value={lashName}
                 onChange={(e) => setLashName(e.target.value)}
               >
                 <option >Select Service</option>

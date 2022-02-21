@@ -1,0 +1,40 @@
+@import '../../styles/mixins';
+
+.login {
+    margin: 0 auto;
+
+    &-title {
+    font-size: .875rem;
+    margin-left: 2rem;
+    font-weight: lighter;
+    }
+
+    &-form {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    }
+
+    &-label {
+    font-size: .75rem;
+    padding: .5rem 0 .5rem;
+    }
+
+    &-input {
+    font-size: .6875rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    width: 90%;
+
+    }
+
+    &-btn {
+    font-size: .6875rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    width: 90%;
+    margin-top: 1rem;
+    }
+}

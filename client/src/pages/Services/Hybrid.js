@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Faq from "../../components/FAQ/Faq";
+import Title from "../../components/Title/Title";
 
 function Hybrid(props) {
   return (
     <section className="lash">
-      Hybrid Lashes
+      <Title title="Hybrid Lashes" />
       <div className="lash-container">
-        <h2 className="lash-title">What are Hybrid Lash Extensions?</h2>
+        <Title title="What are Hybrid Lash Extensions?" />
         <p className="lash-about">
           It’s called Hybrid because it blends the fluffiness and richness of
           Russian Volume with the darkness and length of Classic lashes. Hybrid
@@ -35,8 +35,10 @@ function Hybrid(props) {
           <Link to="/services">Back to Services Page</Link>.
         </p>
       </div>
-      <div>
-        <Faq />
+      <div className="lash-faq">
+        <Link to="/services/faq" className="lash-btn">
+          Faq{" "}
+        </Link>
       </div>
     </section>
   );

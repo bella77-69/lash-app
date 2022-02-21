@@ -1,13 +1,34 @@
 @import '../../styles/mixins';
 
-.social {
-    margin: 0;
-    color: grey;
-    padding: .5rem 1.25rem .5rem 1.25rem;
+// .social {
+//     margin: 0;
+//     color: grey;
+//     padding: .5rem 1rem .5rem 1rem;
+//     margin-top: 0;
+    
+//     :hover {
+//     transform: translateY(-2px);
+//     }
 
-    &-container {
-    display: flex;
-    justify-content: center;
-    background-color: $grey;
-    }
+// }
+
+.social{
+	margin-top: 27px;
+
+  &-icon{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  	background-color:  $font;
+    border-radius: 5px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
 }

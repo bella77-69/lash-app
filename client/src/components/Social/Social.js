@@ -1,26 +1,19 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import './Social.scss';
 
 function Social() {
   return (
     <div className="social">
-      <p className="social-container">
-        <a href="https://www.facebook.com/" className="facebook social">
-          <FontAwesomeIcon icon={faFacebook} size="2x"  />
+        <a href="https://www.facebook.com/" className="social-icon">
+          <FaFacebook />
         </a>
-        <a href="http://www.instagram.com/" className="instagram social">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+        <a href="http://www.instagram.com/" className="social-icon">
+          <FaInstagram />
         </a>
-        <a href="https://wwww.twitter.com" className="twitter social">
-          <FontAwesomeIcon icon={faTwitter} size="2x" />
+        <a href="https://wwww.twitter.com" className="social-icon">
+          <FaTwitter />
         </a>
-      </p>
     </div>
   );
 }

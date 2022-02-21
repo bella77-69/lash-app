@@ -1,0 +1,109 @@
+@import '../../styles/mixins';
+
+.services {
+    padding: 1.5rem 0;
+    background: $grey;
+    text-align: center;
+  
+  &-center {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+  }
+
+  &-icon {
+    display: inline-block;
+    color: $font;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+   &-title {
+    letter-spacing: .187rem;
+    font-size: 1.125rem;
+  }
+
+  &-info {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.125rem;
+  }
+
+  &-link {
+      text-decoration: none;
+      color: $font;
+  }
+
+  @media screen and (min-width: 992px) {
+    .services-center {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .services p {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+  //////////////////////////////
+//   @import '../../styles/mixins';
+
+// .services {
+//     padding:  0;
+//   }
+//   .services {
+//     background: #cfcfcf;
+//     text-align: center;
+//   }
+//   .services-center {
+//     width: 120vw;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     grid-row-gap: 1rem;
+//     grid-column-gap: 2.5rem;
+//   }
+//   .service span {
+//     display: inline-block;
+//     color: #af9a7d;
+//     font-size: 2.5rem;
+//     margin-bottom: .5rem;
+//     padding-top: 1.5rem;
+//   }
+//   .services h6 {
+//     letter-spacing: .1875rem;
+//     font-size: 1.312rem;
+//     font-weight: bold;
+//     margin-bottom: 1.5em;
+//   }
+//   .services p {
+//     width: 95%;
+//     margin: 0 auto;
+//     font-size: 1.312rem;
+//   }
+
+//   .service-link {
+//       text-decoration: none;
+//       color: $font;
+//   }
+//   @media screen and (min-width: 992px) {
+//     .services-center {
+//       width: 95vw;
+//       max-width: 1170px;
+//     }
+//   }
+  
+//   @media screen and (min-width: 1200px) {
+//     .services p {
+//       width: 100%;
+//     }
+//   }

@@ -1,23 +1,36 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
 
+// set up express
+
+const app = express();
+app.use(express.json());
 app.use(cors());
 
-const db = require("./config/keys").mongoURI;
+const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch((err) => console.log(err));
+app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
+// set up mongoose
+
+mongoose.connect(
+  process.env.MONGODB_CONNECTION_STRING,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    // useCreateIndex: true,
+  },
   
-app.use('/login', (req, res) => {
-    res.send({
-      token: 'test123'
-    });
-  });
+  (err) => {
+    if (err) throw err;
+    console.log("MongoDB connection established");
+  }
+);
 
-  
-  app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));
+// set up routes
+
+app.use("/users", require("./routes/users"));
+app.use("/todos", require("./routes/todo"));
+app.use("/waiver", require("./routes/waiver"));
