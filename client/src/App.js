@@ -23,6 +23,7 @@ import Volume from "./pages/Services/Volume";
 import Russian from "./pages/Services/Russian";
 import Faq from "./components/FAQ/Faq";
 import Waiver from "./components/Waiver/Waiver";
+import Price from "./components/Price/Price"
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
             <Route path="/services/volume" exact component={Volume} />
             <Route path="/services/russian" exact component={Russian} />
             <Route path="/services/faq" exact component={Faq}/>
+            <Route path="/prices" exact component={Price}/>
             <Route path="/about" exact component={About} />
             <Route path="/book-appointment" exact component={BookingForm} />
             <Route path="/contact" exact component={Contact} />

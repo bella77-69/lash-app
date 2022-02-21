@@ -15,17 +15,6 @@ function Footer() {
 
         <p class="footer-links">
           <img src={logo} alt="footer-logo" className="footer-img"/>
-          {/* <a href="#" class="link-1">Home</a>
-    
-    <a href="#">Blog</a>
-  
-    <a href="#">Pricing</a>
-  
-    <a href="#">About</a>
-    
-    <a href="#">Faq</a>
-    
-    <a href="#">Contact</a> */}
         </p>
 
         <p class="footer-company">Bella Lashes Inc © 2015</p>
