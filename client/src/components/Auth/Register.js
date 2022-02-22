@@ -4,8 +4,8 @@ import axios from "axios";
 import UserContext from "../../context/userContext";
 import ErrorNotice from "../Misc/ErrorNotice";
 import "./Register.scss";
-import PageHero from "../Hero/PageHero";
 import Title from "../Title/Title";
+import { FaUser } from "react-icons/fa";
 
 function Register() {
   const [email, setEmail] = useState();
@@ -42,51 +42,64 @@ function Register() {
   };
   return (
     <div className="register">
-      <PageHero title='register'/>
       <Title title="Register" />
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
-      <form onSubmit={submit} className="register-form">
-        <label className="register-label">Email: </label>
-        <input
-          type="email"
-          id="email"
-          onChange={(e) => setEmail(e.target.value)}
-          className="register-input"
-        />
-        <label className="register-label">Password: </label>
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => setPassword(e.target.value)}
-          className="register-input"
-        />
-        <input
-          type="password"
-          placeholder="Confirm password"
-          onChange={(e) => setPasswordCheck(e.target.value)}
-          className="register-input"
-        />
-        <label className="register-label">Display name: </label>
-        <input
-          type="text"
-          // placeholder="display name"
-          id="dsplay-name"
-          onChange={(e) => setDisplayName(e.target.value)}
-          className="register-input"
-        />
-         <label className="register-label">Accepted Terms </label>
-        <input className="register-input"
-            name="acceptedTerms"
-            type="checkbox"
-            onChange={e => setAcceptedTerms(e.target.value)}
-            required />
-          I accept the terms of service
-      
-       
-        <input type="submit" value="Register" className="register-btn register-btn__primary" />
-      </form>
+      <div className="register-container">
+        <div className="register-form">
+          <div className="register-box">
+            <h4 className="register-user">
+              <i className="register-circle">
+                <FaUser />
+              </i>
+            </h4>
+          </div>
+          <form onSubmit={submit} className="register-forms">
+            <label className="register-label">Email: </label>
+            <input
+              type="email"
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              className="register-input"
+            />
+            <label className="register-label">Password: </label>
+            <input
+              type="password"
+              id="password"
+              onChange={(e) => setPassword(e.target.value)}
+              className="register-input"
+            />
+            <label className="register-label">Re-Enter Password: </label>
+            <input
+              type="password"
+              onChange={(e) => setPasswordCheck(e.target.value)}
+              className="register-input register-password"
+            />
+            <label className="register-label">Display name: </label>
+            <input
+              type="text"
+              id="display-name"
+              onChange={(e) => setDisplayName(e.target.value)}
+              className="register-input"
+            />
+            <div className="register-message">
+              <div>
+                <input
+                  className="register-input"
+                  className="register-checkbox"
+                  name="acceptedTerms"
+                  type="checkbox"
+                  onChange={(e) => setAcceptedTerms(e.target.value)}
+                  required
+                />
+                I accept the terms of service
+              </div>
+            </div>
+            <input type="submit" value="Register" className="register-button" />
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

@@ -52,7 +52,7 @@ function Login() {
           <form onSubmit={submit} className="login-forms">
             <label className="login-label">Email: </label>
             <input
-              type="text"
+              type="email"
               id="email"
               onChange={(e) => setEmail(e.target.value)}
               className="login-input"
@@ -62,7 +62,7 @@ function Login() {
             <label className="login-label">Password: </label>
 
             <input
-              type="text"
+              type="password"
               id="password"
               onChange={(e) => setPassword(e.target.value)}
               className="login-input"

@@ -3,64 +3,89 @@
 .register {
     margin: 0 auto;
 
-    &-title {
-    font-size: .875rem;
-    margin-left: 1.5rem;
-    font-weight: lighter;
-
-        @include desktop {
-        font-size: 1.312rem;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 2rem;
         }
-    }
-    &-form {
-    margin-left: 1.5rem;
-    display: flex;
-    flex-direction: column;
-
-        @include desktop {
-        width: 50%;
-        }
-    }
     
-    &-label {
-    font-size: .75rem;
-    padding: .5rem 0 .5rem;
-
-        @include desktop {
-        font-size: 1.125rem;
+        &-form {
+        width: 450px;
+        height: 620px;
+        background-color: $grey;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        opacity:0.5;
+        border-radius: 1rem;
         }
-    }
     
-    &-input {
-    font-size: .6875rem;
-    outline: none;
-    border-radius: .3125rem;
-    border: .1875rem solid transparent;
-    width: 90%;
-    background-color: $grey;
-    margin-bottom: 10px;
-
-        @include desktop {
-        font-size: 1rem;   
+        &-forms {
+        margin: 0 auto;
+        border-radius: 1rem;
         }
-    }
     
-    &-btn {
-    font-size: .6875rem;
-    outline: none;
-    border-radius: .3125rem;
-    border: .1875rem solid transparent;
-    width: 90%;
-    margin-top: 1rem;
-
-        @include desktop {
+        &-circle {
+        font-size: 3.125rem;
+        }
+    
+        &-user {
+        text-align: center;
+        }
+    
+        &-label {
         font-size: 1rem;
+        color: $black;
+        padding: .625rem;
+        font-weight: 600;
+        letter-spacing: .125rem;
+        }
+    
+        &-input {
+        font-size: .875rem;
+        outline: none;
+        border-radius: .3125rem;
+        border: .1875rem solid transparent;
+        width: 90%;
+        font-weight: 400;
+        letter-spacing: .125rem;
         }
 
-    &:hover {
-    background-color: transparent;
-    box-shadow: none;
-    color: white;
-    }
+        &-button {
+        margin-top: 2.5rem;
+        margin-bottom: .9375rem;
+        font-size: .9375rem;
+        outline: none;
+        border-radius: .3125rem;
+        border: .1875rem solid transparent;
+        width: 90%;
+        margin-top: 1rem;
+        background-color: $highlight;
+        font-weight: 600;
+        letter-spacing: .125rem;
+        }
+        
+        &-message {
+        display:flex;
+        justify-content:space-between;
+        margin-top: 1rem;
+        }
+    
+        &-checkbox {
+        width: auto;
+        }
+    
+        &-reset {
+        text-decoration: none;
+        color: $font;
+        font-weight: 400;
+        }
+    
+        &-social {
+        display:flex;
+        justify-content:space-around;
     }
 }
