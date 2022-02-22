@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+
+.price {
+    margin: 0 auto;
+    background-color: $grey;
+    border-radius: .3125rem;
+    border: none;
+
+    &-link {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+
+        &:hover {
+        color: $black;
+        }
+    }
+
+    &-img {
+    width: 35%;
+    border-radius: .5rem;
+    margin-left: 8.5rem;
+    text-align: center;
+    }
+
+    &-info {
+    color: $font;
+    }
+}

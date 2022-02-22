@@ -31,19 +31,26 @@ class Services extends Component {
         icon: <GiEyelashes />,
         title: "Russian Lash Extensions",
         info: "Russian lashes are a type of eyelash extensions where small fans of usually 2-6 lashes are applied to one of your natural lashes, thus creating thick, dense volume lashes.",
-      }
+      },
     ],
   };
   render() {
     return (
       <section className="services">
         <PageHero title="services" />
-        <Title title="services"/>
+        <Title title="services" />
         <div className="services-center">
           {this.state.services.map((item) => {
             return (
-              <article key={`item-${item.title}`} className="services-container">
-                <Link to={"/services/" + item.id} key={item.id} className="services-link">
+              <article
+                key={`item-${item.title}`}
+                className="services-container"
+              >
+                <Link
+                  to={"/services/" + item.id}
+                  key={item.id}
+                  className="services-link"
+                >
                   <span className="services-icon">{item.icon}</span>
                   <h6 className="services-title">{item.title}</h6>
                   <p className="services-info">{item.info}</p>
