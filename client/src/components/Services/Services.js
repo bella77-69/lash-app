@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHero from "../Hero/PageHero";
 import { Link } from "react-router-dom";
 import { GiEyelashes } from "react-icons/gi";
 import Title from "../Title/Title";
@@ -37,7 +36,6 @@ class Services extends Component {
   render() {
     return (
       <section className="services">
-        <PageHero title="services" />
         <Title title="services" />
         <div className="services-center">
           {this.state.services.map((item) => {

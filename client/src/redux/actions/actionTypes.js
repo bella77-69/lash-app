@@ -19,4 +19,4 @@ export const ADD_APPOINTMENT_ITEMS = 'ADD_APPOINTMENT_ITEMS';
 export const REMOVE_APPOINTMENT_ITEMS = 'REMOVE_APPOINTMENT_ITEMS';
 
 // List of Branches
-export const branches = ['Classic Full Set', 'Classic Fill', 'Hybrid Full Set', 'Hybrid Fill', 'Volume Full Set', 'Volume Fill', 'Russian Full Set', 'Russian Fill', 'Lash Lift', 'Lash Removal'];
+export const branches = ['Classic Full Set', 'Classic Fill', 'Hybrid Full Set', 'Hybrid Fill', 'Volume Full Set', 'Volume Fill', 'Russian Full Set', 'Russian Fill'];

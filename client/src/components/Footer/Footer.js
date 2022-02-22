@@ -7,20 +7,20 @@ import logo from "../../Assets/Logo/logo.svg";
 
 function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer-left">
+    <footer className="footer">
+      <div className="footer-left">
         <h3 className="footer-logo">
           Bella<span className="footer-logo__span">Lashes Inc.</span>
         </h3>
 
-        <p class="footer-links">
+        <p className="footer-links">
           <img src={logo} alt="footer-logo" className="footer-img"/>
         </p>
 
-        <p class="footer-company">Bella Lashes Inc © 2015</p>
+        <p className="footer-company">Bella Lashes Inc © 2015</p>
       </div>
 
-      <div class="footer-center">
+      <div className="footer-center">
         <div className="footer-icons">
           <ImLocation />
           <p className="footer-info">
@@ -44,8 +44,8 @@ function Footer() {
         </div>
       </div>
 
-      <div class="footer-right">
-        <p class="footer-about">
+      <div className="footer-right">
+        <p className="footer-about">
           <span className="footer-questions">Got Questions? Get in touch</span>
           If you'd like more information about any of our lash services, please
           reach out and we will contact you promptly. And while you're at it,
@@ -53,7 +53,7 @@ function Footer() {
           online.
         </p>
 
-        <div class="footer-social">
+        <div className="footer-social">
           <Social />
         </div>
       </div>

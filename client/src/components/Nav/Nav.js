@@ -35,9 +35,6 @@ export default class Nav extends Component {
             <NavLink to="/about" className="nav-links">
               About
             </NavLink>
-            {/* <NavLink to="/book-appointments" className="nav-links">
-             Book
-           </NavLink> */}
             <NavLink to="/services" className="nav-links">
               Serivces
             </NavLink>

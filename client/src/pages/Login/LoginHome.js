@@ -6,13 +6,13 @@ import Hero from "../../components/Hero/Hero";
 import { NavLink } from "react-router-dom";
 
 const images = [
-    "img-01.jpg",
-    "img-02.jpg",
-    "img-03.jpg",
-    "img-04.jpg",
-    "img-05.jpg",
-    "img-06.jpg",
-  ];
+  "img-01.jpg",
+  "img-02.jpg",
+  "img-03.jpg",
+  "img-04.jpg",
+  "img-05.jpg",
+  "img-06.jpg",
+];
 
 function LoginHome() {
   const { userData } = useContext(UserContext);
@@ -24,12 +24,12 @@ function LoginHome() {
   return (
     <div>
       {userData.user ? (
-           <div className="row " id="Body">
-           <Hero />
-           <Carousel images={images} />
-        
-        <h1>Welcome {userData.user.displayName}</h1>
- <NavLink to="/book-appointment" className="menu-item">
+        <div className="row " id="Body">
+          <Hero />
+          <Carousel images={images} />
+
+          <h1>Welcome {userData.user.displayName}</h1>
+          <NavLink to="/book-appointment" className="menu-item">
             Book Appointment
           </NavLink>
         </div>

@@ -3,20 +3,18 @@ import "./App.scss";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-
 import UserContext from "./context/userContext";
 import Home from "./pages/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 // import Login from "./pages/Login/Login";
 import Login from "./components/Auth/Login";
-// import LoginHome from "./pages/Login/LoginHome";
+
 import Register from "./components/Auth/Register";
 import Services from "./components/Services/Services";
 import BookingForm from "./components/Booking/BookingForm";
-// import ResetPassword from "./pages/Login/ResetPassword";
+import ResetPassword from "./pages/Login/ResetPassword";
 import Classic from "./pages/Services/Classic";
 import Hybrid from "./pages/Services/Hybrid";
 import Volume from "./pages/Services/Volume";
@@ -73,11 +71,10 @@ function App() {
             <Route path="/about" exact component={About} />
             <Route path="/book-appointment" exact component={BookingForm} />
             <Route path="/contact" exact component={Contact} />
-            {/* <Route path='/' exact component={LoginHome}/> */}
             <Route path="/login" component={Login} />
-           {/* <Route path="/reset-password" component={ResetPassword} />  */}
             <Route path="/register" exact component={Register} />
             <Route path="/waiver"exact component={Waiver}/>
+            <Route path="/reset-password" exact component={ResetPassword}/>
           </Switch>
           <Footer />
           </UserContext.Provider>

@@ -4,8 +4,10 @@ import axios from "axios";
 import UserContext from "../../context/userContext";
 import ErrorNotice from "../Misc/ErrorNotice";
 import "./Login.scss";
-import PageHero from "../Hero/PageHero";
 import Title from "../Title/Title";
+import Social from "../Social/Social";
+import { FaLock, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState();
@@ -33,13 +35,62 @@ function Login() {
   };
   return (
     <div className="login">
-      <PageHero title='login'/>
       <Title title="Login" />
-      <h2 className="login-title">Login</h2>
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
+
+      <div className="login-container">
+        <div className="login-form">
+          <div className="login-box">
+            <h4 className="login-user">
+              <i className="login-circle">
+                <FaUser />
+              </i>
+            </h4>
+          </div>
+          <form onSubmit={submit} className="login-forms">
+            <label className="login-label">Email: </label>
+            <input
+              type="text"
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              className="login-input"
+              placeholder="Email"
+            />
+
+            <label className="login-label">Password: </label>
+
+            <input
+              type="text"
+              id="password"
+              onChange={(e) => setPassword(e.target.value)}
+              className="login-input"
+              placeholder="Password"
+            />
+            <input type="submit" value="Login" className="login-button" />
+            <div className="login-message">
+              <div>
+                <input type="checkbox" className="login-checkbox" /> Remember ME
+              </div>
+              <div>
+                <Link to="/reset-password" className="login-reset">
+                  Forgot your password
+                </Link>
+              </div>
+            </div>
+          </form>
+          <div className="login-social">
+            <i className="login-social__social">
+              <Social />
+            </i>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="login-container">
       <form onSubmit={submit} className="login-form">
+            <h4 className="text-primary text-center"><i className="fa fa-user-circle" style={{fontSize:"110px"}}></i></h4>
         <label className="login-label">Email: </label>
         <input
           type="email"
@@ -55,7 +106,11 @@ function Login() {
           className="login-input"
         />
         <input type="submit" value="Login" className="login-btn login-btn__primary" />
+        <Social />
       </form>
+   
+      </div>
+    </div> */}
     </div>
   );
 }

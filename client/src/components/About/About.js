@@ -1,13 +1,11 @@
 import React from "react";
 import "./About.scss";
-import PageHero from "../Hero/PageHero";
 import aboutImg from "../../Assets/Images/about-img.jpg";
 import Title from "../Title/Title";
 
 const About = () => {
   return (
     <main className="about">
-      <PageHero title="about" />
       <div className="about-wrapper">
         <img className="about-img" src={aboutImg} alt="nice desk" />
 
