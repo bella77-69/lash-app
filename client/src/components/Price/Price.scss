@@ -2,28 +2,120 @@
 
 .price {
     margin: 0 auto;
-    background-color: $grey;
-    border-radius: .3125rem;
-    border: none;
-
-    &-link {
-    text-decoration: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 
-        &:hover {
-        color: $black;
+    &-table {
+    margin: 20px;
+    display: block;
+    width: 400px;
+    background: linear-gradient(to left, #fff, $shading);
+   // background: linear-gradient(to left, #fff, $grey);
+    color: $font;
+    box-shadow:3px 4px 5px 2px $shade;
+
+        &:not(:last-child) {
+        margin-right: 1.25rem;
+        }
+
+        &:after {
+        display: table;
+        content: "";
         }
     }
 
-    &-img {
-    width: 35%;
-    border-radius: .5rem;
-    margin-left: 8.5rem;
+    &-block {
     text-align: center;
+    overflow: hidden;
     }
 
-    &-info {
+    &-header {
+    height: 150px;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    }
+
+    &-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    }
+
+    &-price {
+    color: gray;
+    padding: 10px;
+    }
+
+    &-currency {
+    margin-top: .625rem;
+    vertical-align: top;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.6;
+    display: inline-block;
+    }
+
+    &-value {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    }
+
+    &-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    }
+
+    &-list {
+    display: block;
+    padding: 10px 20px;
+    margin:0;
+
+        // &:nth-child(2n) {
+        // background: linear-gradient(to left, $grey, $shade);
+        // }
+
+        // &:nth-child(2n+1) {
+        // background: linear-gradient(to left, #fff, $grey);
+        // }
+      }
+
+
+    &-button {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .3125rem;
     color: $font;
+    
+        &:hover {
+        opacity: 1 !important;
+        color: #fff;
+        background: $font;
+        }
+
+        &:link {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $grey;
+        color: $font; 
+        }
     }
 }
+
+
+
+ 
+
+
+
+
+
