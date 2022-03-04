@@ -41,6 +41,9 @@ export default class Nav extends Component {
             <NavLink to="/prices" className="nav-links">
               Prices
             </NavLink>
+            <NavLink to='book-appointment'className="nav-links">
+            Booking
+            </NavLink>
             <NavLink to="/contact" className="nav-links">
               Contact
             </NavLink>

@@ -13,7 +13,6 @@ import Login from "./components/Auth/Login";
 
 import Register from "./components/Auth/Register";
 import Services from "./components/Services/Services";
-import BookingForm from "./components/Booking/BookingForm";
 import ResetPassword from "./pages/Login/ResetPassword";
 import Classic from "./pages/Services/Classic";
 import Hybrid from "./pages/Services/Hybrid";
@@ -22,7 +21,7 @@ import Russian from "./pages/Services/Russian";
 import Faq from "./components/FAQ/Faq";
 import Waiver from "./components/Waiver/Waiver";
 import Price from "./components/Price/Price"
-
+import BookingPage from "./pages/Booking/BookingPage";
 
 function App() {
   const [userData, setUserData] = useState({
@@ -69,7 +68,7 @@ function App() {
             <Route path="/services/faq" exact component={Faq}/>
             <Route path="/prices" exact component={Price}/>
             <Route path="/about" exact component={About} />
-            <Route path="/book-appointment" exact component={BookingForm} />
+            <Route path="/book-appointment" exact component={BookingPage} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
             <Route path="/register" exact component={Register} />

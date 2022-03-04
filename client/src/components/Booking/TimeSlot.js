@@ -1,7 +1,6 @@
-import "./Booking.scss"
+import "./Booking.scss";
 
-export default function TimeSlot(item) {
-
+export default function TimeSlot() {
   const timeStampArr = [
     "10:00 AM",
     "10:30 AM",
@@ -21,11 +20,11 @@ export default function TimeSlot(item) {
     "05:30 PM",
     "06:00 PM",
     "06:30 PM",
-    "07:00 PM"
+    "07:00 PM",
   ];
 
   return (
-    <div className="card" >
+    <div className="card">
       <h5 className="card-title">Please select your preferred slot</h5>
       <div className="card-body">
         {timeStampArr.map((item) => (
