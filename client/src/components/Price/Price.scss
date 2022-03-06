@@ -2,12 +2,14 @@
 
 .price {
     margin: 0 auto;
+
+    &-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-
+    }
     &-table {
     margin: 20px;
     display: block;

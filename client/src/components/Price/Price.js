@@ -1,12 +1,15 @@
 import React from "react";
 import "./Price.scss";
 import { Link } from "react-router-dom";
-
+import Title from "../Title/Title";
 class Price extends React.Component {
   render() {
     return (
       <div className="price">
+          <Title title="Pricing" />
+          <div className="price-container">
         <div className="price-table">
+       
           <div className="price-block">
             <div className="price-header">
               <div className="price-heading">Classic Full Set</div>
@@ -237,6 +240,7 @@ class Price extends React.Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

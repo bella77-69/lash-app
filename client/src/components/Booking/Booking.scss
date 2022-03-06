@@ -1,74 +1,149 @@
-@import '../../styles/mixins';
+@import "../../styles/mixins";
 
 .booking {
-margin: 0;
+  margin: 0;
 
-&-container {
-margin: 0;
-}
-
-&-title {
-font-size: 1.125rem;
-color: $font;
-margin: 1rem 0 0 .5rem;
-}
-
-&-form {
-display: flex;
-flex-direction: column;
-background-color: $grey;
-
-  &__container {
-  padding: .625rem;
+  &-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grey;
   }
-}
 
-&-label {
-font-size: .875rem;
-margin-left: .25rem;
-}
+  &-form {
+    display: flex;
+    //flex-direction: column;
+    line-height: 3;
+    font-size: 1.5rem;
+    color: $font;
+    background-color: $grey;
 
-&-control {
-width: 50%;
-}
+    &__drop {
+      padding: 0.625rem;
+    
+    }
 
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0.625rem;
+    }
+  }
+
+  &-select {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $font;
+   // padding: 0.3125rem;
+    border: none;
+  }
+
+  &-label {
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 600;
+  }
+
+  &-control {
+    font-size: 1rem;
+  }
 }
 
 .card {
   margin: 0;
+  background-color: $grey;
 
   &-title {
-  font-size: 1rem;
-  color: $font;
-  font-weight: lighter;
+    font-size: 1rem;
+    color: $font;
+    font-weight: lighter;
   }
 
   &-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   &-button {
-  padding: .3125rem;
-  margin: .25rem;
-  &:hover {
-    opacity: 1 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3125rem;
     color: $font;
-    background-color: rgb(110, 108, 108);
-    color: #FFF;
-  }
+    background-color: transparent;
+    transition: all 0.3s linear;
+    margin-bottom: 0.9375rem;
+    margin-right: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0.3125rem;
+    border: 0.1875rem solid transparent;
+
+    &:hover {
+      opacity: 1 !important;
+      color: #fff;
+      //background: $font;
+    }
   }
   &-booking {
-  margin: .25rem 0 0 .25rem;
+    margin: 0.25rem 0 0 0.25rem;
   }
-
 }
 
 .alert {
-  margin: 1rem 0 .25rem 0;
+  margin: 1rem 0 0.25rem 0;
   color: $font;
+}
+
+.react-calendar {
+  width: 37.5rem;
+  border-radius: .625rem;
 
 
+.react-calendar__navigation {
+.react-calendar__navigation__arrow {
+  color: $black;
+}
+
+.react-calendar__navigation__label {
+  font-weight: 600;
+  color: $font;
+  }
+}
+.react-calendar__tile {
+  height: 50px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 1rem;
+  color: $font;
+}
+
+.react-calendar__tile--active {
+  background: $shade;
+  color: $white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: $highlight;
+}
+
+.react-calendar__tile,
+.react-calendar__month-view__days__day {
+  font-size: 1.25rem;
+  color: $font;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: $active;
+}
 }

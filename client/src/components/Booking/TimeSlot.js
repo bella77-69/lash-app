@@ -2,6 +2,8 @@ import "./Booking.scss";
 
 export default function TimeSlot() {
   const timeStampArr = [
+    "09:00 AM",
+    "09:30 AM",
     "10:00 AM",
     "10:30 AM",
     "11:00 AM",
@@ -21,6 +23,9 @@ export default function TimeSlot() {
     "06:00 PM",
     "06:30 PM",
     "07:00 PM",
+    "07:30 PM",
+    "08:00 PM",
+    "08:30 PM"
   ];
 
   return (

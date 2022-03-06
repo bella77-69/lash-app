@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BookingForm  from "../../components/Booking/BookingForm"
-
+import Title from "../../components/Title/Title";
 export default function BookingPage () {
 
   const [lashName, setLashName] = useState("");
@@ -29,6 +29,7 @@ export default function BookingPage () {
   return (
     <div>
       <section>
+      <Title title="Booking" />
         <BookingForm
           onChange={onChange}
           bookAppointment={bookAppointment}
