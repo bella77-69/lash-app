@@ -1,0 +1,73 @@
+@import '../../styles/mixins';
+
+.waiver {
+ margin: 0 auto;
+
+ &-title {
+     font-size: 1.5rem;
+     color: $font;
+ }
+
+ &-subtitle {
+     font-size: 1rem;
+     color: $font;
+ }
+
+ &-form {
+     display: flex;
+     flex-direction: column;
+     line-height: 3;
+     font-size: 1.5rem;
+     color: $font;
+ }
+
+ &-input {
+     font-size: 1rem;
+ }
+
+ &-label {
+     font-weight: 600;
+     color: $font;
+ }
+}
+
+.question {
+    margin: 0 auto;
+
+    &-subtitle {
+    font-size: 1rem;
+    color: $font;
+    }
+   
+    &-form {
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+    font-size: 1rem;
+    color: $font;
+    }
+    &-input {
+    font-size: 1rem;
+    }
+   
+    &-label {
+    font-weight: 600;
+    color: $font;
+    font-size: 1rem;
+    }
+
+    &-btn {
+        margin-top: 2.5rem;
+        margin-bottom: .9375rem;
+        font-size: .9375rem;
+        outline: none;
+        border-radius: .3125rem;
+        border: .1875rem solid transparent;
+        
+        margin-top: 1rem;
+        background-color: $highlight;
+        font-weight: 600;
+        letter-spacing: .125rem;
+        }
+    }
+

@@ -2,7 +2,8 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
 import "./Booking.scss";
-
+import Waiver from "../Waiver/Waiver";
+import WaiverQ from "../Waiver/WaiverQ";
 export default function BookingModal({
   userName,
   lashName,
@@ -39,6 +40,7 @@ export default function BookingModal({
                 Your Appointment
                 <span>&nbsp;for {lashName} Booked Successfully</span>
               </div>
+              <Waiver />
               <Link to="/">
                 <button onClick={closeModal}>close</button>
               </Link>

@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import UserContext from "../../context/userContext";
 import ErrorNotice from "../Misc/ErrorNotice";
+import './waiver.scss';
 
 function WaiverQ() {
   const [services, setServices] = useState();
@@ -32,124 +33,125 @@ function WaiverQ() {
     }
   };
   return (
-    <div>
-      <p className="login-subtitle"></p>
+    <div className="question">
+      <p className="question-subtitle"></p>
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
-      <form onSubmit={submit} className="login-form">
-        Services
-        <label className="login-label">
+      <form onSubmit={submit} className="question-form">
+        {/* Services */}
+        <label className="question-label">
+        
           Have you ever received this service before? (Individual or strip
           eyelash extenstions?){" "}
         </label>
         <input
           type="text"
-          placeholder="services"
+          // placeholder="services"
           id="services"
           onChange={(e) => setServices(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Services Continued </label>
+        <label className="question-label">
         If YES, how was that experience for you? Did you have any discomfort,
-        irritation or reactions?
+        irritation or reactions?</label>
         <input
           type="text"
-          placeholder="services continued"
+          // placeholder="services continued"
           id="servicescont"
           onChange={(e) => setServices(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Allergies</label>
+        <label className="question-label">Allergies
         Are you allergic or sensitive to Latex, Bananas, Nail polish, Kiwi,
-        Strawberries, Nuts?
+        Strawberries, Nuts?</label>
         <input
           type="text"
-          placeholder="Yes or No"
+          // placeholder="Yes or No"
           id="allergies"
           onChange={(e) => setAllergies(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Allergies Continued</label>
-        Do you have any food or skin allergies or sensitivities?
+        <label className="question-label">Allergies Continued
+        Do you have any food or skin allergies or sensitivities?</label>
         <input
           type="text"
           id="allergiescontinued"
-          placeholder="Allergies Continued"
+          // placeholder="Allergies Continued"
           onChange={(e) => setAllergies(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Allergies Continued</label>
+        <label className="question-label">Allergies Continued
         Do you have any conditions, or complications internally? ie. glucose
         intolerant, diabetes, irritable bowel syndrome etc. PLEASE LIST ANY AND
-        ALL.
+        ALL.</label>
         <input
           type="text"
           id="allergiescontinued2"
-          placeholder="Allergies Continued(2)"
+         // placeholder="Allergies Continued(2)"
           onChange={(e) => setAllergies(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Eye Illness or Surgeries</label>
+        <label className="question-label">Eye Illness or Surgeries
         Do you have, or are you being treated for any eye illness or surgery?
-        Please explain.
+        Please explain.</label>
         <input
           type="text"
           id="allergiescontinued2"
-          placeholder="Allergies Continued(2)"
+        //  placeholder="Allergies Continued(2)"
           onChange={(e) => setAllergies(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Pregnancy</label>
+        <label className="question-label">Pregnancy
         Are you pregnant? If so, which trimester? Have you had lash extensions
-        during pregnancy?
+        during pregnancy?</label>
         <input
           type="text"
           id="pregnancy"
-          placeholder="Pregnancy"
+         // placeholder="Pregnancy"
           onChange={(e) => setWaiver(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Lash Habits</label>
-        Do you habitually rub, pull, or pick your lashes for any reason?
+        <label className="question-label">Lash Habits
+        Do you habitually rub, pull, or pick your lashes for any reason?</label>
         <input
           type="text"
           id="lashhabits"
-          placeholder="Lash Habits"
+        //  placeholder="Lash Habits"
           onChange={(e) => setWaiver(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Eye Habits</label>
-        Are you able to keep your eyes closed for up to 2 hours or longer?
+        <label className="question-label">Eye Habits
+        Are you able to keep your eyes closed for up to 2 hours or longer?</label>
         <input
           type="text"
           id="eyehabits"
-          placeholder="Eye Habits"
+        //  placeholder="Eye Habits"
           onChange={(e) => setWaiver(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Details</label>
-        Is there anything else we should know?
+        <label className="question-label">Details
+        Is there anything else we should know?</label>
         <input
           type="text"
           id="details"
-          placeholder="Details"
+         // placeholder="Details"
           onChange={(e) => setWaiver(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <label className="login-label">Permission to Use Pictures/Photos</label>
+        <label className="question-label">Permission to Use Pictures/Photos
         Do we have your permission to use photos we may take for social media or
         advertising? If so, please list your instagram name or social media
-        handle so that we can tag you (if you chose so:)
+        handle so that we can tag you (if you chose so:)</label>
         <input
           type="text"
           id="permission"
-          placeholder="Permission to Use Pictures/Photos"
+        //  placeholder="Permission to Use Pictures/Photos"
           onChange={(e) => setWaiver(e.target.value)}
-          className="login-input"
+          className="question-input"
         />
-        <p>
-          This form and process is powered by Waiversign on behalf of Blella
+        <p className="waiver-subtitle">
+          This form and process is powered by questionign on behalf of Blella
           Lashes Inc. Bella Lashes Inc. will collect and use your data in
           accordance with their Privacy Policy and/or Terms of Service. Please
           direct any questions about their Privacy Policy and/or Terms of
@@ -158,13 +160,13 @@ function WaiverQ() {
         </p>
         <input
           type="submit"
-          value="Next"
-          className="login-btn login-btn__primary"
+          value="Agree/Submit"
+          className="question-btn question-btn__primary"
         />
         <input
           type="submit"
-          value="back"
-          className="login-btn login-btn__primary"
+          value="Go Back"
+          className="question-btn question-btn__primary"
         />
       </form>
     </div>
