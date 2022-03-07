@@ -4,13 +4,14 @@
  margin: 0 auto;
 
  &-title {
-     font-size: 1.5rem;
+     font-size: 1.25rem;
      color: $font;
  }
 
  &-subtitle {
      font-size: 1rem;
      color: $font;
+     width: 50%;
  }
 
  &-form {
@@ -28,7 +29,7 @@
  &-label {
      font-weight: 600;
      color: $font;
- }
+ } 
 }
 
 .question {
@@ -36,7 +37,9 @@
 
     &-subtitle {
     font-size: 1rem;
+    line-height: 2;
     color: $font;
+    width: 50%;
     }
    
     &-form {
@@ -51,23 +54,31 @@
     }
    
     &-label {
-    font-weight: 600;
     color: $font;
     font-size: 1rem;
+    font-weight: 600;
     }
-
     &-btn {
         margin-top: 2.5rem;
         margin-bottom: .9375rem;
-        font-size: .9375rem;
+        font-size: 1rem;
         outline: none;
         border-radius: .3125rem;
         border: .1875rem solid transparent;
-        
+        color: $font;
+        text-transform: uppercase;
         margin-top: 1rem;
-        background-color: $highlight;
+        background-color: $white;
         font-weight: 600;
         letter-spacing: .125rem;
-        }
+    
+            &:hover {
+            opacity: 1 !important;
+            color: $white;
+            background: $font;
+            box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);
+      }
+    }
+   
     }
 

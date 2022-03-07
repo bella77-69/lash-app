@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Link } from "react-router-dom";
 import "./Booking.scss";
 import Waiver from "../Waiver/Waiver";
-import WaiverQ from "../Waiver/WaiverQ";
+
 export default function BookingModal({
   userName,
   lashName,
@@ -33,16 +33,15 @@ export default function BookingModal({
               onRequestClose={closeModal}
               contentLabel="Example Modal"
               ariaHideApp={false}
+              lashName={lashName}
             >
-              <h2>Hello{userName}</h2>
-              
-              <div className="alert" role="alert">
-                Your Appointment
+              <div className="modal-alert" role="alert">
+                {userName} Your Appointment
                 <span>&nbsp;for {lashName} Booked Successfully</span>
               </div>
               <Waiver />
               <Link to="/">
-                <button onClick={closeModal}>close</button>
+                <button onClick={closeModal} className="modal-btn">close</button>
               </Link>
             </Modal>
           </section>
@@ -61,18 +60,13 @@ export default function BookingModal({
     <>
       {" "}
       {successMessage()}
-      <button onClick={bookAppointment}>Book Appointment!!!</button>
+      <button onClick={bookAppointment} className="modal-btn">Book Appointment!!!</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
         ariaHideApp={false}
       >
-        <h2>Hello{userName}</h2>
-        <div className="alert" role="alert">
-          Your Appointment Has Been Booked SuccessFully
-          <span className="alert-danger">{userName}</span>
-        </div>
         <button onClick={closeModal}>close</button>
         Book Appointment
       </Modal>

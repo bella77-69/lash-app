@@ -21,7 +21,7 @@ router.put("/", async(req,res) => {
 })
 
 router.get("/",(req,res) => {
-    // const waiver = await Waiver.find({ userId: req.user});
+    const waiver = Waiver.find({ userId: req.user});
     res.status(200).json();
     // res.json(waiver);
 })

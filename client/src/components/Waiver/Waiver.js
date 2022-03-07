@@ -16,14 +16,13 @@ function Waiver() {
   const [postal, setPostalCode] = useState();
   const [city, setCity] = useState();
   const [email, setEmail] = useState();
-
   const [error, setError] = useState();
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const loginUser = { fname, lname};
+      const loginUser = { fname, lname, email};
       const loginResponse = await axios.post(
         "http://localhost:5000/users/waiver",
         loginUser

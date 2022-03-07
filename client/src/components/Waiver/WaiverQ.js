@@ -4,6 +4,7 @@ import axios from "axios";
 import UserContext from "../../context/userContext";
 import ErrorNotice from "../Misc/ErrorNotice";
 import './waiver.scss';
+import { Link } from "react-router-dom";
 
 function WaiverQ() {
   const [services, setServices] = useState();
@@ -150,7 +151,7 @@ function WaiverQ() {
           onChange={(e) => setWaiver(e.target.value)}
           className="question-input"
         />
-        <p className="waiver-subtitle">
+        <p className="question-subtitle">
           This form and process is powered by questionign on behalf of Blella
           Lashes Inc. Bella Lashes Inc. will collect and use your data in
           accordance with their Privacy Policy and/or Terms of Service. Please
@@ -158,15 +159,16 @@ function WaiverQ() {
           Service or the use and collection of your data to
           lashnbella@gmail.com.
         </p>
+        <Link to="/" >
         <input
           type="submit"
           value="Agree/Submit"
-          className="question-btn question-btn__primary"
-        />
+          className="question-btn"
+        /></Link>
         <input
           type="submit"
           value="Go Back"
-          className="question-btn question-btn__primary"
+          className="question-btn"
         />
       </form>
     </div>

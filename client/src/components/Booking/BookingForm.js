@@ -112,7 +112,7 @@ export default function Form({
             </div>
           </div>
 
-          <h5 className="card-title">Date : {selectedDate}</h5>
+          <h5 className="booking-select">Date : {selectedDate}</h5>
 
           <TimeSlot></TimeSlot>
           {successMessage()}

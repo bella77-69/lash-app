@@ -29,11 +29,11 @@ export default function TimeSlot() {
   ];
 
   return (
-    <div className="card">
-      <h5 className="card-title">Please select your preferred slot</h5>
-      <div className="card-body">
+    <div className="time">
+      <h5 className="time-title">Please select your preferred slot</h5>
+      <div className="time-body">
         {timeStampArr.map((item) => (
-          <button type="button" className="card-button" key={item}>
+          <button type="button" className="time-button" key={item}>
             {item}
           </button>
         ))}
