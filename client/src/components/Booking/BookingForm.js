@@ -18,6 +18,7 @@ export default function Form({
   bookAppointment,
   setSelectedDate,
   setSuccess,
+  item,
 }) {
   const successMessage = () => {
     return (
@@ -113,8 +114,8 @@ export default function Form({
           </div>
 
           <h5 className="booking-select">Date : {selectedDate}</h5>
-
-          <TimeSlot></TimeSlot>
+                
+          <TimeSlot item={item}></TimeSlot>
           {successMessage()}
         </div>
       </div>

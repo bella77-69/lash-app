@@ -1,11 +1,13 @@
 import React from "react";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";
+import "./Faq.scss";
+
 function Faq() {
   return (
     <section className="faq">
       <div className="faq-container">
-        <Title title=" Can I get my eyelash extensions wet right away?" />
+        <Title title=" Can I get my eyelash extensions wet right away?" className="faq-title"/>
 
         <p className="faq-answer one">
           It’s not ideal, but it’s okay to get your extensions wet in the first
@@ -56,13 +58,18 @@ function Faq() {
         </p>
       </div>
 
-      <div>
-        <p>
-          <Link to="/">Back to Homepage</Link>.
-        </p>
-        <p>
-          <Link to="/services">Back to Services Page</Link>.
-        </p>
+      <div className="faq-faq">
+        <Link to="/services/faq" className="faq-link">
+          <button className="faq-btn">faq</button>
+        </Link>
+
+        <Link to="/">
+          <button className="faq-btn">Back to Homepage</button>
+        </Link>
+
+        <Link to="/services">
+          <button className="faq-btn">Back to Services Page</button>
+        </Link>
       </div>
     </section>
   );

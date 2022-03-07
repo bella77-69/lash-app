@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Title from "../../components/Title/Title";
+import image from "../../Assets/Images/hybrid.jpg";
 
 function Hybrid(props) {
   return (
     <section className="lash">
       <Title title="Hybrid Lashes" />
       <div className="lash-container">
+        <div className="lash-img">
+          <img src={image} className="lash-image" alt="classic-lashes" />
+        </div>
         <Title title="What are Hybrid Lash Extensions?" />
         <p className="lash-about">
           It’s called Hybrid because it blends the fluffiness and richness of
@@ -19,7 +23,7 @@ function Hybrid(props) {
         </p>
       </div>
       <div>
-        <p>
+        <p className="lash-about">
           Not ready to go Full Volume? The fluffiness and richness of Russian
           Volume lashes blended with the simplicity, darkness and length of
           Classic lashes. Best for textured, full sets that aren't overly
@@ -28,17 +32,19 @@ function Hybrid(props) {
         </p>
       </div>
       <div>
-        <p>
-          <Link to="/">Back to Homepage</Link>.
-        </p>
-        <p>
-          <Link to="/services">Back to Services Page</Link>.
-        </p>
-      </div>
-      <div className="lash-faq">
-        <Link to="/services/faq" className="lash-btn">
-          Faq{" "}
-        </Link>
+        <div className="lash-faq">
+          <Link to="/services/faq" className="lash-link">
+            <button className="lash-btn">faq</button>
+          </Link>
+
+          <Link to="/">
+            <button className="lash-btn">Back to Homepage</button>
+          </Link>
+
+          <Link to="/services">
+            <button className="lash-btn">Back to Services Page</button>
+          </Link>
+        </div>
       </div>
     </section>
   );

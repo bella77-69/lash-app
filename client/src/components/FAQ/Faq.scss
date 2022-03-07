@@ -1,27 +1,22 @@
 @import '../../styles/mixins';
 
-.lash {
-    margin: 0, auto;
+.faq {
+    margin: 0 auto;
 
     &-container {
     margin: 0 auto;
+    width: 70%; 
     }
 
-    &-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &-title {
+    font-size: 1.5rem;
     }
 
-    &-image {
-    image-rendering: auto;
-    }
-
-    &-about {
-    margin: 5rem;
+    &-answer {
     font-size: 1.25rem;
     line-height: 2.5rem;
     text-align: center;
+    
     }
 
     &-faq {
@@ -48,6 +43,6 @@
         color: $white;
         background: $font;
         box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);
-      }
+        }
     } 
 }

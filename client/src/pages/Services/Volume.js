@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Title from "../../components/Title/Title";
+import image from "../../Assets/Images/volume.webp";
 
 function Volume(props) {
   return (
     <section className="lash">
       <Title title="Volume Lashes" />
       <div className="lash-container">
+      <div className="lash-img">
+            <img src={image} className="lash-image" alt="classic-lashes" />
+          </div>
         <Title title="What are Volume Lash Extensions?" />
         <p className="lash-about">
           Volume is the technique of applying two or more extensions per natural
@@ -20,7 +24,7 @@ function Volume(props) {
         </p>
       </div>
       <div>
-        <p>
+        <p className="lash-about">
           Craving something more? Russian Volume is a technique where multiple
           ultra-fine lashes are applied to your natural lashes, giving a look
           full of dimension and texture. Skillfully applied fans of 3-5
@@ -32,18 +36,23 @@ function Volume(props) {
         </p>
       </div>
       <div>
-        <p>
-          <Link to="/">Back to Homepage</Link>.
-        </p>
-        <p>
-          <Link to="/services">Back to Services Page</Link>.
-        </p>
-      </div>
       <div className="lash-faq">
-        <Link to="/services/faq" className="lash-btn">
-          Faq{" "}
-        </Link>
-      </div>
+          <Link to="/services/faq" className="lash-link">
+            <button className="lash-btn">faq</button>
+          </Link>
+      
+          
+            <Link to="/">
+              <button className="lash-btn">Back to Homepage</button>
+            </Link>
+          
+        
+            <Link to="/services">
+              <button className="lash-btn">Back to Services Page</button>
+            </Link>
+         
+          </div>
+        </div>
     </section>
   );
 }

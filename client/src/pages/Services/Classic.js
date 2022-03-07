@@ -24,7 +24,7 @@ export default class Classic extends Component {
           </p>
         </div>
         <div>
-          <p>
+          <p className="lash-about">
             Using a variety of lengths, curls, and thicknesses to provide a
             textured and flattering set to every client. Classic means one
             synthetic lash that is carefully applied to each natural lash. This
@@ -36,19 +36,25 @@ export default class Classic extends Component {
           </p>
         </div>
         <div>
-          <p>
-            <Link to="/">Back to Homepage</Link>.
-          </p>
-          <p>
-            <Link to="/services">Back to Services Page</Link>.
-          </p>
+        <div className="lash-faq">
+          <Link to="/services/faq" className="lash-link">
+            <button className="lash-btn">faq</button>
+          </Link>
+      
+          
+            <Link to="/">
+              <button className="lash-btn">Back to Homepage</button>
+            </Link>
+          
+        
+            <Link to="/services">
+              <button className="lash-btn">Back to Services Page</button>
+            </Link>
+         
+          </div>
         </div>
 
-        <div className="lash-faq">
-          <Link to="/services/faq" className="lash-btn">
-            Faq{" "}
-          </Link>
-        </div>
+       
       </section>
     );
   }

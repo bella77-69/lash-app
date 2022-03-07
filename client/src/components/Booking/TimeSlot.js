@@ -1,6 +1,7 @@
 import "./Booking.scss";
 
 export default function TimeSlot() {
+
   const timeStampArr = [
     "09:00 AM",
     "09:30 AM",
@@ -29,6 +30,7 @@ export default function TimeSlot() {
   ];
 
   return (
+    
     <div className="time">
       <h5 className="time-title">Please select your preferred slot</h5>
       <div className="time-body">
@@ -40,4 +42,5 @@ export default function TimeSlot() {
       </div>
     </div>
   );
+
 }
