@@ -31,6 +31,10 @@
     }
   }
 
+  &-wrapper {
+    display: flex;
+  }
+
   &-select {
     font-size: 1rem;
     font-weight: 600;

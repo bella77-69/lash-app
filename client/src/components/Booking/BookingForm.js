@@ -40,6 +40,7 @@ export default function Form({
       </>
     );
   };
+  
   return (
     <>
       <div className="booking">

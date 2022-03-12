@@ -86,8 +86,7 @@ function Register() {
             <div className="register-message">
               <div>
                 <input
-                  className="register-input"
-                  className="register-checkbox"
+                  className="register-input register-checkbox"
                   name="acceptedTerms"
                   type="checkbox"
                   onChange={(e) => setAcceptedTerms(e.target.value)}

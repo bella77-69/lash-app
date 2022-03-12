@@ -42,20 +42,21 @@ function Footer() {
             </a>
           </p>
         </div>
-      </div>
-
-      <div className="footer-right">
-        <p className="footer-about">
-          <span className="footer-questions">Got Questions? Get in touch</span>
-          If you'd like more information about any of our lash services, please
-          reach out and we will contact you promptly. And while you're at it,
-          make sure to register to take advantage of booking your appointments
-          online.
-        </p>
-
         <div className="footer-social">
           <Social />
         </div>
+      </div>
+
+      <div className="footer-right">
+        <p className="footer-about">Got Questions? Get in touch</p>
+          <span className="footer-questions">
+          If you'd like more information about any of our lash services, please
+          reach out and we will contact you promptly. And while you're at it,
+          make sure to register to take advantage of booking your appointments
+          online.</span>
+     
+
+    
       </div>
     </footer>
   );

@@ -4,7 +4,6 @@ const cors = require("cors");
 require("dotenv").config();
 
 // set up express
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -34,3 +33,4 @@ mongoose.connect(
 app.use("/users", require("./routes/users"));
 app.use("/todos", require("./routes/todo"));
 app.use("/waiver", require("./routes/waiver"));
+app.use("/appointment", require("./routes/appointment"));
