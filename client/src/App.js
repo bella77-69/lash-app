@@ -41,7 +41,7 @@ function App() {
         { headers: { "x-auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userRes = await axios.get("http://localhost:5000/users/", {
+        const userRes = await axios.get("http://localhost:5000/users/login", {
           headers: { "x-auth-token": token },
         });
         setUserData({

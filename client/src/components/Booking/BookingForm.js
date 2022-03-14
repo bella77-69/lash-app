@@ -19,6 +19,7 @@ export default function Form({
   setSelectedDate,
   setSuccess,
   item,
+  submit
 }) {
   const successMessage = () => {
     return (
@@ -45,7 +46,7 @@ export default function Form({
     <>
       <div className="booking">
         <div className="booking-container">
-          <form className="booking-form">
+          <form className="booking-form" onSubmit={submit}>
             <label className="booking-label">Name</label>
             <div className="booking-form__container">
               <input

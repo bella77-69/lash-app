@@ -4,7 +4,7 @@
     padding: 1.5rem 0;
     background: $white;
     text-align: center;
-  
+  	background: $grey;
   &-center {
     width: 90vw;
     margin: 0 auto;
@@ -12,6 +12,13 @@
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
+  }
+
+  &-container {
+    background-color: $active;
+    border-radius: .5rem;
+    box-shadow:3px 4px 5px 2px $shade;
+    padding: 1.25rem;
   }
 
   &-icon {

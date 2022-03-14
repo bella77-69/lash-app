@@ -6,6 +6,7 @@ node_modules/
 .pnp.js
 default.json
 .env
+keys.js
 # testing
 /coverage
 

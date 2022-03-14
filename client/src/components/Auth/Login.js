@@ -6,19 +6,20 @@ import ErrorNotice from "../Misc/ErrorNotice";
 import "./Login.scss";
 import Title from "../Title/Title";
 import Social from "../Social/Social";
-import { FaLock, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [displayName, setDisplayName] = useState();
   const [error, setError] = useState();
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const loginUser = { email, password };
+      const loginUser = { email, password, displayName };
       const loginResponse = await axios.post(
         "http://localhost:5000/users/login",
         loginUser

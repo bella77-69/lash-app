@@ -12,7 +12,7 @@ export default class Nav extends Component {
   };
   render() {
     return (
-      <nav className="navbar">
+      <nav className="nav">
         <div className="nav-center">
           <div className="nav-header">
             <NavLink to="/" className="nav-link">
@@ -27,7 +27,7 @@ export default class Nav extends Component {
             </button>
           </div>
           <ul
-            className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
+            className={this.state.isOpen ? "nav-links nav-show" : "nav-links"}
           >
             <NavLink to="/" className="nav-links">
               Home

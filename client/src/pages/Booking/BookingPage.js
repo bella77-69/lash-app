@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BookingForm  from "../../components/Booking/BookingForm"
 import Title from "../../components/Title/Title";
+import axios from "axios";
 export default function BookingPage () {
 
   const [lashName, setLashName] = useState("");
@@ -10,6 +11,17 @@ export default function BookingPage () {
   const [selectedDate, setSelectedDate] = useState("");
   const [success, setSuccess] = useState(false);
 
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+    
+      const appointment = await axios.post(
+        "http://localhost:5000/appointment/appointment_add",
+appointment
+      );
+      } catch (err) {
+        console.log(err)
+      }}
   const bookAppointment = () => {
     setSuccess(true);
     setUserName("");
@@ -31,6 +43,7 @@ export default function BookingPage () {
       <section>
       <Title title="Booking" />
         <BookingForm
+        onSubmit={submit}
           onChange={onChange}
           bookAppointment={bookAppointment}
           lashName={lashName}

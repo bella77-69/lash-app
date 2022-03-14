@@ -8,6 +8,7 @@ import Title from "../Title/Title";
 import { FaUser } from "react-icons/fa";
 
 function Register() {
+  const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordCheck, setPasswordCheck] = useState();
@@ -16,11 +17,10 @@ function Register() {
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
   const [acceptedTerms, setAcceptedTerms] = React.useState(false);
-
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const newUser = { email, password, passwordCheck, displayName };
+      const newUser = { name, email, password, passwordCheck, displayName };
       await axios.post("http://localhost:5000/users/register", newUser);
       const loginResponse = await axios.post(
         "http://localhost:5000/users/login",
@@ -56,6 +56,13 @@ function Register() {
             </h4>
           </div>
           <form onSubmit={submit} className="register-forms">
+          <label className="register-label">Name: </label>
+            <input
+              type="text"
+              id="name"
+              onChange={(e) => setName(e.target.value)}
+              className="register-input"
+            />
             <label className="register-label">Email: </label>
             <input
               type="email"
