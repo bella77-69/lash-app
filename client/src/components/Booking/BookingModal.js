@@ -5,13 +5,13 @@ import "./Booking.scss";
 import Waiver from "../Waiver/Waiver";
 
 export default function BookingModal({
-  userName,
-  lashName,
-  setUserName,
-  setDescription,
-  setSelectedDate,
+  name,
+  lashType,
+  submitHandler,
+  email,
+  onClick,
+  onSubmit,
 }) {
-
   const [success, setSuccess] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -33,15 +33,18 @@ export default function BookingModal({
               onRequestClose={closeModal}
               contentLabel="Example Modal"
               ariaHideApp={false}
-              lashName={lashName}
+              lashType={lashType}
+              name={name}
             >
               <div className="modal-alert" role="alert">
-                {userName} Your Appointment
-                <span>&nbsp;for {lashName} Booked Successfully</span>
+                {name} Your Appointment has been
+                <span>&nbsp;for {lashType} Booked Successfully</span>
               </div>
               <Waiver />
               <Link to="/">
-                <button onClick={closeModal} className="modal-btn">close</button>
+                <button onClick={closeModal} className="modal-btn">
+                  close
+                </button>
               </Link>
             </Modal>
           </section>
@@ -51,16 +54,18 @@ export default function BookingModal({
   };
   const bookAppointment = () => {
     setSuccess(true);
-    setUserName("");
-    setDescription("");
-    setSelectedDate("");
+    // setName("");
+    // setEmail("");
+    // setSelectedDate("");
     openModal(true);
   };
   return (
     <>
       {" "}
       {successMessage()}
-      <button onClick={bookAppointment} className="modal-btn">Book Appointment!!!</button>
+      <button onClick={bookAppointment} className="modal-btn">
+        Book Appointment!!!
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

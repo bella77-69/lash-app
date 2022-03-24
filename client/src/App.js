@@ -10,7 +10,6 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 // import Login from "./pages/Login/Login";
 import Login from "./components/Auth/Login";
-
 import Register from "./components/Auth/Register";
 import Services from "./components/Services/Services";
 import ResetPassword from "./pages/Login/ResetPassword";

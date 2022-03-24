@@ -6,7 +6,7 @@ import ErrorNotice from "../Misc/ErrorNotice";
 import './waiver.scss';
 import { Link } from "react-router-dom";
 
-function WaiverQ() {
+function WaiverQ({submitWaiver}) {
   const [services, setServices] = useState();
   const [allergies, setAllergies] = useState();
   const [waiver, setWaiver] = useState();
@@ -20,7 +20,7 @@ function WaiverQ() {
     try {
       const loginUser = { waiver, services, allergies };
       const loginResponse = await axios.post(
-        "http://localhost:5000/users/waiver",
+        "http://localhost:5000/waiver/add",
         loginUser
       );
       setUserData({
@@ -39,7 +39,7 @@ function WaiverQ() {
       {error && (
         <ErrorNotice message={error} clearError={() => setError(undefined)} />
       )}
-      <form onSubmit={submit} className="question-form">
+      <form onSubmit={submitWaiver} className="question-form">
         {/* Services */}
         <label className="question-label">
         
@@ -161,15 +161,18 @@ function WaiverQ() {
         </p>
         <Link to="/" >
         <input
+         onClick={submitWaiver}
+        // onSubmit={submitWaiver}
           type="submit"
           value="Agree/Submit"
           className="question-btn"
         /></Link>
-        <input
+        
+        {/* <input
           type="submit"
           value="Go Back"
           className="question-btn"
-        />
+        /> */}
       </form>
     </div>
   );

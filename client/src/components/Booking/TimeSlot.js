@@ -1,6 +1,9 @@
 import "./Booking.scss";
 
-export default function TimeSlot() {
+export default function TimeSlot({
+  submit,
+time
+}) {
 
   const timeStampArr = [
     "09:00 AM",

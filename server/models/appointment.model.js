@@ -4,12 +4,12 @@ const appointmentSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    time: { type: String, required: true },
-    date: { type: String, required: true },
-    phone: { type: String, required: true },
-    isBooked: { type: Boolean, default: false },
+    lashType: { type: String, required: true },
+    slotTime: { type: String, requred: true },
+    // slotDate: {type: String, required: true},
+    // isBooked: { type: Boolean, default: false },
     updated: { type: Date, default: Date.now() },
-    // userId: { type: String, required: true}
+    userId: { type: String },
   },
   { timestamps: true }
 );

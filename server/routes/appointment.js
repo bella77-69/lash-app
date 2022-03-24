@@ -2,7 +2,7 @@ const router = require('express').Router();
 const auth = require('../middleware/auth');
 const Appointment = require('../models/appointment.model');
 
-router.get("/appointment", function (req, res) {
+router.get("/", function (req, res) {
    try {
        Appointment.find((err, data) => {
            if(err) {
@@ -18,7 +18,7 @@ router.get("/appointment", function (req, res) {
    }
 })
 
-router.post('/appointment_add', function (req,res) {
+router.post('/add', function (req,res) {
     const dbfeed = req.body
     try {
         Appointment.create(dbfeed, (err, data) => {
@@ -34,7 +34,7 @@ router.post('/appointment_add', function (req,res) {
         }
     });
 
-router.get('/appointment/:id', function (req, res) {
+router.get('/:id', function (req, res) {
     Appointment.findOne({ _id: req.params.id },(err, data) => {
         if (err) {
             res.status(500).send(err)
@@ -44,6 +44,15 @@ router.get('/appointment/:id', function (req, res) {
     })
 })
 
+router.delete('/:id', async (req, res) => {
+    try {
+        const deleteAppointment = await Appointment.deleteOne({ _id:req.params.id });
+        res.status(200).json(deleteAppointment);
+      } catch (err) {
+          res.statusMessage(500).json({ error: err.message});
+      }
+    });
+        
 // router.put("/", async(req,res) => {
 //     try{
 //         const { email, fname, lname } = req.body;
@@ -62,17 +71,5 @@ router.get('/appointment/:id', function (req, res) {
 //     }
 // })
 
-// router.get("/",(req,res) => {
-//     const waiver = Waiver.find({ userId: req.user});
-//     res.status(200).json();
-//     // res.json(waiver);
-// })
 
-// router.delete("/:id", auth, async(req,res) => {
-//     const waiver = await Waiver.findOne({userId: req.user, _id: req.params.id });
-//     if(!waiver)
-//         return res.status(400).json({msg: "No waiver item found !!"});
-//     const deletedItem = await Waiver.findByIdAndDelete(req.params.id);
-//     res.json(deletedItem);
-// });
 module.exports = router;
