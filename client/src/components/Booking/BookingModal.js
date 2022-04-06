@@ -4,14 +4,7 @@ import { Link } from "react-router-dom";
 import "./Booking.scss";
 import Waiver from "../Waiver/Waiver";
 
-export default function BookingModal({
-  name,
-  lashType,
-  submitHandler,
-  email,
-  onClick,
-  onSubmit,
-}) {
+export default function BookingModal({ name, lashType, time, date, submitHandler }) {
   const [success, setSuccess] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -31,19 +24,24 @@ export default function BookingModal({
             <Modal
               isOpen={modalIsOpen}
               onRequestClose={closeModal}
-              contentLabel="Example Modal"
+              closeModal={closeModal}
               ariaHideApp={false}
               lashType={lashType}
               name={name}
+              time={time}
+              date={date}
             >
               <div className="modal-alert" role="alert">
-                {name} Your Appointment has been
-                <span>&nbsp;for {lashType} Booked Successfully</span>
+                {name} Your Appointment
+                <span>
+                  &nbsp; at {time} on {date.toDateString()} has been Booked
+                  Successfully
+                </span>
               </div>
-              <Waiver />
-              <Link to="/">
+              <Waiver lashType={lashType} name={name} time={time} date={date} />
+              <Link to="/book-appointment">
                 <button onClick={closeModal} className="modal-btn">
-                  close
+                 Go Back
                 </button>
               </Link>
             </Modal>
@@ -54,9 +52,6 @@ export default function BookingModal({
   };
   const bookAppointment = () => {
     setSuccess(true);
-    // setName("");
-    // setEmail("");
-    // setSelectedDate("");
     openModal(true);
   };
   return (
@@ -64,16 +59,20 @@ export default function BookingModal({
       {" "}
       {successMessage()}
       <button onClick={bookAppointment} className="modal-btn">
-        Book Appointment!!!
+        Book Appointment!!! (booking modal component)
       </button>
       <Modal
         isOpen={modalIsOpen}
+        closeModal={closeModal}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
         ariaHideApp={false}
+        date={date}
+        time={time}
+     
       >
-        <button onClick={closeModal}>close</button>
-        Book Appointment
+        <button onClick={closeModal}>Go Back</button>
+        <button>Book Appointment</button>
       </Modal>
     </>
   );

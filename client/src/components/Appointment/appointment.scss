@@ -1,0 +1,120 @@
+html, body{
+    font-size: 16px;
+    min-height: 700px;
+  }
+  .App {
+    text-align: center;
+    width: 100%;
+    background: #ebeef5;
+    min-height: 100vh;
+  }
+  
+  .makeAppointment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 7rem;
+    background:#fcfcfe;
+}
+
+.makeAppointment .makeAppointmentButton{
+    padding: .9rem;
+    margin-left: 15rem;
+    color: #fff;
+    background: linear-gradient(to right, #9495ea, #6c6de4 );
+    border: none;
+    border-radius: .3rem;
+    box-shadow: 0px 4px 20px #e3e4f7;
+    letter-spacing: .09rem;
+    cursor: pointer;
+    outline: none;
+}
+.makeAppointment button:active{
+    border: inset 1px #7471d5;
+}
+.makeAppointment .profileContainer{
+    display: flex;
+    margin-right: 15rem;
+}
+.makeAppointment .profileContainer .profilePic{
+    width: 3rem;
+    height: 3rem;
+    margin-right: .5rem;
+    border-radius: 2rem;
+    background: #f6c5e6;
+    box-shadow: 0px 4px 20px #e3e4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.makeAppointment .profileContainer .profilePic img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+}
+
+.makeAppointment .profileContainer select{
+    border: none;
+    padding: 1rem 0rem;
+    font-weight: bold;
+    text-indent: .8rem;
+}
+
+.makeAppointment .profileContainer select:focus{
+    outline: none;
+}
+
+.modalWindow{
+    padding: 3rem 6rem;
+    background: linear-gradient(50deg, #22156a 10%, #582a97, #0e77be);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.styles_modal__gNwvD{
+    padding: 0;
+}
+.styles_closeIcon__1QwbI{
+    fill: #fff;
+    cursor: pointer;
+}
+
+.modalWindow h4{
+    margin: 1rem 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.modalWindow label{
+    padding: 2rem 0;
+}
+.modalWindow select{
+    display: block;
+    padding: .5rem 0 .5rem .5rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+.modalWindow select:focus{
+    outline: none;
+}
+.modalWindow button{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    background: #eaeafc;
+    border: none;
+    color: #22156a;
+    cursor: pointer;
+}
+@media screen and (max-width: 70rem){
+    .makeAppointment{
+        justify-content: space-around;
+    }
+    .makeAppointment .makeAppointmentButton{
+        margin: 0;
+    }
+    .makeAppointment .profileContainer{
+        margin-right: 0;
+    }
+}

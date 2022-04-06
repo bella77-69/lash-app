@@ -2,14 +2,49 @@
 
 .booking {
   margin: 0;
-
+ 
   &-container {
     margin: 0;
+    background-color: $grey;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $grey;
+
+      &__middle {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1.5rem;
+      }
+
+      &__time {
+      letter-spacing: .0625rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $font;
+      border: none;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        color: $font;
+      }
+
+      &__bottom {
+        width: 100%;
+        margin-top: 1rem;
+        
+      }
+
   }
+
+
+
+ 
+ 
+ 
 
   &-form {
     display: flex;
@@ -19,16 +54,22 @@
     color: $font;
     background-color: $grey;
 
+      &__info {
+      font-size: 1.5rem;
+      }
+
+      &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0.625rem;
+      }
+
     &__drop {
       padding: 0.625rem;
     
     }
 
-    &__container {
-      display: flex;
-      flex-direction: column;
-      padding: 0.625rem;
-    }
+    
   }
 
   &-wrapper {
@@ -56,12 +97,14 @@
 
 .time {
   margin: 0;
-  background-color: $grey;
+  // background-color: $grey;
   
-  &-title {
+  &-select {
     font-size: 1rem;
     color: $font;
     text-align: center;
+    width: 15%;
+    height: 4vh;
   }
 
   &-body {
@@ -141,7 +184,7 @@
 
 
 .react-calendar {
-  width: 37.5rem;
+  width: 47.5rem;
   border-radius: .625rem;
 
 
@@ -153,6 +196,7 @@
 .react-calendar__navigation__label {
   font-weight: 600;
   color: $font;
+  font-size: 1.5rem;
   }
 }
 .react-calendar__tile {
@@ -160,7 +204,7 @@
 }
 
 .react-calendar__month-view__weekdays__weekday {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: $font;
 }
 

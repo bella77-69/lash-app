@@ -10,6 +10,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 // import Login from "./pages/Login/Login";
 import Login from "./components/Auth/Login";
+import BookingModal from "./components/Booking/BookingModal";
 import Register from "./components/Auth/Register";
 import Services from "./components/Services/Services";
 import ResetPassword from "./pages/Login/ResetPassword";
@@ -71,6 +72,7 @@ function App() {
             <Route path="/contact" exact component={Contact} />
             <Route path="/login" component={Login} />
             <Route path="/register" exact component={Register} />
+            <Route path="/modal" exact component={BookingModal} />
             <Route path="/waiver"exact component={Waiver}/>
             <Route path="/reset-password" exact component={ResetPassword}/>
           </Switch>

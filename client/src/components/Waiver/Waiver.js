@@ -129,6 +129,7 @@ import axios from "axios";
 import { Button } from "antd";
 import WaiverQ from "../../components/Waiver/WaiverQ";
 import './waiver.scss';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Waiver() {
   const [waiverInput, setWaiverInput] = useState({
@@ -142,7 +143,7 @@ export default function Waiver() {
     postalCode: "",
     city: "",
   });
-
+  const history = useHistory();
   const [error, setError] = useState(true);
   const baseUrl = "http://localhost:5000";
 
@@ -191,6 +192,7 @@ export default function Waiver() {
             postalCode: "",
             city: "",
           });
+          history.push("/");
         })
         .catch((error) => {
           console.log("error adding waiver: ", error);
@@ -280,10 +282,12 @@ export default function Waiver() {
         />
 
         {error && <div>{error}</div>}
-          <Button className="waiver-btn" onClick={submitWaiver}></Button>
+        <Link to="/">
+          <Button className="waiver-btn" onClick={submitWaiver}>Book Appointment (Waiver com)</Button>
+          </Link>
       </form>
     
-      <WaiverQ  onSubmit={submitWaiver}  onClick={submitWaiver}/>
+      {/* <WaiverQ  onSubmit={submitWaiver}  onClick={submitWaiver}/> */}
     </div>
   );
 }
