@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.scss";
-import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
-import UserContext from "./context/userContext";
 import Home from "./pages/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-// import Login from "./pages/Login/Login";
-import Login from "./components/Auth/Login";
 import BookingModal from "./components/Booking/BookingModal";
-import Register from "./components/Auth/Register";
 import Services from "./components/Services/Services";
-import ResetPassword from "./pages/Login/ResetPassword";
 import Classic from "./pages/Services/Classic";
 import Hybrid from "./pages/Services/Hybrid";
 import Volume from "./pages/Services/Volume";
@@ -24,39 +18,9 @@ import Price from "./components/Price/Price"
 import BookingPage from "./pages/Booking/BookingPage";
 
 function App() {
-  const [userData, setUserData] = useState({
-    token: undefined,
-    user: undefined,
-  });
-  useEffect(() => {
-    const checkLoggedIn = async () => {
-      let token = localStorage.getItem("auth-token");
-      if (token === null) {
-        localStorage.setItem("auth-token", "");
-        token = "";
-      }
-      const tokenResponse = await axios.post(
-        "http://localhost:5000/users/tokenIsValid",
-        null,
-        { headers: { "x-auth-token": token } }
-      );
-      if (tokenResponse.data) {
-        const userRes = await axios.get("http://localhost:5000/users/login", {
-          headers: { "x-auth-token": token },
-        });
-        setUserData({
-          token,
-          user: userRes.data,
-        });
-      }
-    };
-    checkLoggedIn();
-  }, []);
     return (
       <div className="App">
         <Router>
-        <UserContext.Provider value={{ userData, setUserData }}>
-          {/* <Header /> */}
           <Nav />
           <Switch>
              <Route path="/" exact component={Home} /> 
@@ -70,14 +34,10 @@ function App() {
             <Route path="/about" exact component={About} />
             <Route path="/book-appointment" exact component={BookingPage} />
             <Route path="/contact" exact component={Contact} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" exact component={Register} />
             <Route path="/modal" exact component={BookingModal} />
             <Route path="/waiver"exact component={Waiver}/>
-            <Route path="/reset-password" exact component={ResetPassword}/>
           </Switch>
           <Footer />
-          </UserContext.Provider>
         </Router>
       </div>
     );

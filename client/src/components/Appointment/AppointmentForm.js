@@ -54,7 +54,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
   };
 
   return (
-    <div className="booking-container__bottom">
+    <div className="booking-container booking-right booking-middle">
       <form className="booking-form" onSubmit={submitHandler}>
         <div className="booking-form__container">
           <h2 className="booking-form__info">
@@ -65,7 +65,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
             value={input.name}
             name="name"
             placeholder="Your Name"
-            className="booking-label"
+            className="booking-form__label"
             onChange={changeHandler}
           />
         </div>
@@ -75,17 +75,18 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
             value={input.email}
             name="email"
             placeholder="Your Email"
-            className="booking-label"
+            className="booking-form__label"
             onChange={changeHandler}
           />
         </div>
         <div className="booking-form__container">
-          <div className="col-4">
+          <div className="booking-form__div">
             <select
-              className="booking-label"
+              className="booking-form__label"
               name="lashType"
               value={input.lashType}
               onChange={changeHandler}
+             
             >
               <option
                 className="booking-option"
@@ -94,6 +95,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
               >
                 Select Service
               </option>
+              <option value="Select Lash Service">Select Lash Service</option>
               <option value="Classic Lashes Full Set">
                 Classic Lashes Full Set
               </option>
@@ -114,7 +116,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
           </div>
         </div>
         {error && <div>{error}</div>}
-        <div className="form-group text-right">
+        <div className="booking-form__container">
           {/* <button
                 type="submit"
                 className="btn btn-brand"

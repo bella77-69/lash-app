@@ -5,7 +5,7 @@ import Title
  from "../Title/Title";
 const AppointmentHeader = ({ handleDateChange }) => {
   return (
-    <main className="booking-container">
+    <main className="booking-container booking-left">
       <div className="booking-container__calendar">
         <Calendar onChange={handleDateChange} value={new Date()} />
       </div>

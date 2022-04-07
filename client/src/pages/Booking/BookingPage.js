@@ -163,7 +163,6 @@ import BookAppointment from "../../components/Appointment/BookAppointment";
 import BookingCard from "../../components/Appointment/BookingCard";
 import Title from "../../components/Title/Title";
 
-
 export default function BookingPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [time, setTime] = useState();
@@ -175,13 +174,14 @@ export default function BookingPage() {
   return (
     <section className="booking">
       <div className="title">
-          <Title title="Book Appointment" />
-          </div>
+        <Title title="Book Appointment" />
+      </div>
       <AppointmentHeader
         handleDateChange={handleDateChange}
         time={setTime}
       ></AppointmentHeader>
-      <div className="booking-container__middle">
+      <div className="booking-container booking-right">
+        <p className="booking-select">Select a time:</p>
         <select
           className="booking-container__time"
           value={time}

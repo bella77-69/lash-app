@@ -58,8 +58,8 @@ export default function BookingModal({ name, lashType, time, date, submitHandler
     <>
       {" "}
       {successMessage()}
-      <button onClick={bookAppointment} className="modal-btn">
-        Book Appointment!!! (booking modal component)
+      <button onClick={bookAppointment} className="booking-btn">
+        Book Appointment
       </button>
       <Modal
         isOpen={modalIsOpen}

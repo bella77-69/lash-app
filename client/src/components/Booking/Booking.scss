@@ -2,150 +2,203 @@
 
 .booking {
   margin: 0;
- 
-  &-container {
-    margin: 0;
-    background-color: $grey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-      &__middle {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 1.5rem;
+  &-select {
+  font-size: .8125rem;
+  font-weight: 600;
+  color: $font;
+
+   @include tablet {
+     display: inline-block;
+     padding: 1.25rem;
+   }
+
+   @include desktop {
+  padding: 0;
+   }
+  }
+
+  &-container {
+   width: 100%;
+
+      @include desktop {
+      float: left;
+      width: 48%;
+      }
+
+      &__calendar {
+       padding: 1rem;
+
+      @include desktop {
+      margin-left: 5rem;
+      margin-top: 5rem;
+      }
       }
 
       &__time {
-      letter-spacing: .0625rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: $font;
-      border: none;
+        letter-spacing: .0625rem;
+        font-size: .75rem;
+        font-weight: 600;
+        color: $font;
+        border: none;
+        border-radius: .3125rem;
+        background-color: $white;
+            
+          @include desktop {
+          font-size: 1rem;
+          }
       }
 
       &__title {
-        font-size: 1.5rem;
+        font-size: .875rem;
         color: $font;
-      }
+        font-weight: 600;
+        padding-top: .625rem;
+        font-style: oblique;
+        margin: .625rem;
 
-      &__bottom {
-        width: 100%;
-        margin-top: 1rem;
-        
-      }
+        @include tablet {
+        padding: 0;
+        }
 
+         @include desktop {
+          font-size: 1.2rem;
+          padding-top: 1rem;
+         }
+    
+      }
+      
+      &__select {
+        font-size: .875rem;
+        font-weight: 600;
+        color: $font;
+         // padding: 0.3125rem;
+        border: none;
+        @include desktop {
+          font-size: 1rem;
+        }
+      }
   }
 
+   &-left {
+    margin: 0;
+    background-color: $grey;
 
+      @include tablet {
+      display: flex;
+      justify-content: center;
+      }
 
- 
- 
- 
+      @include desktop {
+      margin-right: 2%;
+      }
+   }
+  
+   &-right {
+    margin: 0;
+    padding-left: 1rem;
+    background-color: $grey;
+    margin-top: -1rem;
+      
+      @include desktop {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: baseline;
+      }
+  }
+
+   &-middle {
+    margin: 0;
+    margin-top: -1rem;
+
+      @include desktop {
+      margin: 0;
+      top: -1.5rem;
+      }
+  }
 
   &-form {
     display: flex;
     flex-direction: column;
-    line-height: 3;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: $font;
     background-color: $grey;
+   
+        @include desktop {
+        line-height: 3;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+
+    }
+    &__label {
+     width: 80%;
+     font-size: .75rem;
+      font-weight: 400;
+      border: none;
+      border-radius: .3125rem;
+      background-color: $white;
+
+      @include tablet {
+      width: 60%;
+      font-size: .875rem;
+      }
+
+      @include desktop {
+        width: 50%;
+        font-size: 1rem;
+      }
+    }
 
       &__info {
-      font-size: 1.5rem;
+      font-size: .8125rem;
+      font-weight: 600;
+      color: $font;
+
+          @include desktop {
+          font-size: .9375rem;
+          }
       }
 
       &__container {
       display: flex;
       flex-direction: column;
-      padding: 0.625rem;
+      padding-top: 1rem;
       }
-
-    &__drop {
-      padding: 0.625rem;
-    
-    }
-
-    
   }
 
-  &-wrapper {
-    display: flex;
-  }
-
-  &-select {
-    font-size: 1rem;
-    font-weight: 600;
-    color: $font;
-   // padding: 0.3125rem;
-    border: none;
-  }
-
-  &-label {
-    font-size: 1rem;
-    margin-left: 1rem;
-    font-weight: 600;
-  }
-
-  &-control {
-    font-size: 1rem;
-  }
-}
-
-.time {
-  margin: 0;
-  // background-color: $grey;
-  
-  &-select {
-    font-size: 1rem;
-    color: $font;
-    text-align: center;
-    width: 15%;
-    height: 4vh;
-  }
-
-  &-body {
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  &-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3125rem;
-    color: $font;
-    background-color: transparent;
-    transition: all 0.3s linear;
-    margin-bottom: 0.9375rem;
-    margin-right: 0.9375rem;
-    font-weight: 600;
-    letter-spacing: 0.0625rem;
-    font-size: 1rem;
+  &-btn {
+    margin-bottom: .9375rem;
+    font-size: .75rem;
     outline: none;
-    border-radius: 0.3125rem;
-    border: 0.1875rem solid transparent;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    color: $font;
+    text-transform: uppercase;
+    background-color: $white;
+    font-weight: 600;
+    letter-spacing: .125rem;
+    width: 70%;
+
+        @include tablet {
+        width: 30%;
+        font-size: .875rem;
+        }
+   
+        @include desktop {
+        margin-top: .5rem;
+        width: 60%;
+        font-size: 1rem;
+        }
 
     &:hover {
       opacity: 1 !important;
-      color: #fff;
-      //background: $font;
+      color: $white;
+      background: $font;
+      box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);
     }
-
-  
-  }
-  &-booking {
-    margin: 0.25rem 0 0 0.25rem;
-  }
+}
 }
 
 .modal {
@@ -181,31 +234,36 @@
 }
 
 //react calendar styles
-
-
 .react-calendar {
-  width: 47.5rem;
+  width: 30rem;
   border-radius: .625rem;
-
-
+}
 .react-calendar__navigation {
 .react-calendar__navigation__arrow {
   color: $black;
 }
 
 .react-calendar__navigation__label {
-  font-weight: 600;
-  color: $font;
-  font-size: 1.5rem;
-  }
+  font-size: .9375rem;
+  
+    @include tablet {
+    font-weight: 600;
+    color: $font;
+    font-size: 1.5rem;
+    }
 }
+
 .react-calendar__tile {
   height: 50px;
 }
 
 .react-calendar__month-view__weekdays__weekday {
-  font-size: 1.25rem;
+  font-size: .875rem;
   color: $font;
+  
+    @include tablet {
+    font-size: 1.25rem;
+    }
 }
 
 .react-calendar__tile--active {
@@ -220,8 +278,12 @@
 
 .react-calendar__tile,
 .react-calendar__month-view__days__day {
-  font-size: 1.25rem;
+  font-size: 14px;
   color: $font;
+  
+    @include tablet {
+    font-size: 1.25rem;
+    }
 }
 
 .react-calendar__month-view__days__day--weekend {

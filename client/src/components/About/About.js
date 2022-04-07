@@ -6,13 +6,14 @@ import Title from "../Title/Title";
 const About = () => {
   return (
     <main className="about">
+         <div className="about-title">
+            <Title title="Our Story" />
+          </div>
       <div className="about-wrapper">
         <img className="about-img" src={aboutImg} alt="nice desk" />
 
         <article className="about-container">
-          <div className="about-title">
-            <Title title="Our Story" />
-          </div>
+       
           <p className="about-details">
             Longer, thicker and fuller Lashes! Bella Lashes Inc Eyelash
             Extensions are a semi-permanent way of lengthening and thickening

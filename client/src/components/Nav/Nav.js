@@ -48,13 +48,13 @@ export default class Nav extends Component {
               Contact
             </NavLink>
 
-            <NavLink to="/login" className="nav-links">
+            {/* <NavLink to="/login" className="nav-links">
               Login
             </NavLink>
 
             <NavLink to="/register" className="nav-links">
               Register
-            </NavLink>
+            </NavLink> */}
           </ul>
         </div>
       </nav>

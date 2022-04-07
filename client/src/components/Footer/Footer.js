@@ -14,7 +14,7 @@ function Footer() {
         </h3>
 
         <p className="footer-links">
-          <img src={logo} alt="footer-logo" className="footer-img"/>
+          <img src={logo} alt="footer-logo" className="footer-img" />
         </p>
 
         <p className="footer-company">Bella Lashes Inc © 2015</p>
@@ -49,14 +49,12 @@ function Footer() {
 
       <div className="footer-right">
         <p className="footer-about">Got Questions? Get in touch</p>
-          <span className="footer-questions">
+        <span className="footer-questions">
           If you'd like more information about any of our lash services, please
           reach out and we will contact you promptly. And while you're at it,
-          make sure to register to take advantage of booking your appointments
-          online.</span>
-     
-
-    
+          make sure to check out our facebook page, where we regularly post
+          specials.
+        </span>
       </div>
     </footer>
   );

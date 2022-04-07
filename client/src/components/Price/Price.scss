@@ -17,6 +17,7 @@
     background: linear-gradient(to left, #fff, $shading);
     color: $font;
     box-shadow:3px 4px 5px 2px $shade;
+    border-radius: .5rem;
 
         &:not(:last-child) {
         margin-right: 1.25rem;
