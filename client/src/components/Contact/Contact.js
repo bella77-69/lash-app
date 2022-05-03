@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../Title/Title";
 import "./Contact.scss";
 import "../Booking/BookingModal";
-import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -40,11 +39,6 @@ function Contact() {
         </div>
         <input className="contact-submit" type="submit" value="Submit" />
       </form>
-      <div className="contact-details">
-        <Link to="/book-appointment" className="contact-btn">
-          Book Appointment{" "}
-        </Link>
-      </div>
     </div>
   );
 }

@@ -2,12 +2,6 @@
 
 .home {
     margin: 0;
-    // background-image: url('../../Assets/Images/img-04.jpg');
-    // background-repeat: no-repeat;
-    // min-height: calc(200vh - 66px);
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
 
     &-container {
     display: flex;
@@ -43,13 +37,4 @@
     color: white;
     }
     }
-
-    // &-image {
-    //     background-position: center center;
-    //     background-image: contain;
-    //     min-height: calc(100vh - 66px);
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
 }

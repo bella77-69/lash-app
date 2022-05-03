@@ -1,9 +1,6 @@
-
 import React, { useState } from "react";
 import AppointmentForm from "../../components/Appointment/AppointmentForm";
 import AppointmentHeader from "../../components/Appointment/AppointmentHeader";
-import BookAppointment from "../../components/Appointment/BookAppointment";
-import BookingCard from "../../components/Appointment/BookingCard";
 import Title from "../../components/Title/Title";
 
 export default function BookingPage() {
@@ -54,13 +51,10 @@ export default function BookingPage() {
           <option value="6:30pm">6:30pm</option>
           <option value="7:00pm">7:00pm</option>
         </select>
-        <h2 className="booking-container__title">
-          Appointment Booked for: {selectedDate.toDateString()} at {time}
-        </h2>
-        {/* <h1 className="booking-select">Selected Time: {time}</h1> */}
+        <h3 className="booking-container__title">
+          You have selected: {selectedDate.toDateString()} at {time}
+        </h3>
       </div>
-      {/* <BookAppointment date={selectedDate} time={time}></BookAppointment> */}
-      {/* <BookingCard date={selectedDate} time={time}></BookingCard> */}
       <AppointmentForm date={selectedDate} time={time} />
     </section>
   );

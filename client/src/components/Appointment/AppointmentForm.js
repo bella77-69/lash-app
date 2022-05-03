@@ -86,7 +86,6 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
               name="lashType"
               value={input.lashType}
               onChange={changeHandler}
-             
             >
               <option
                 className="booking-option"
@@ -117,19 +116,9 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
         </div>
         {error && <div>{error}</div>}
         <div className="booking-form__container">
-          {/* <button
-                type="submit"
-                className="btn btn-brand"
-               onClick={submitHandler}
-                onSubmit={() => setInput(input)}
-              >
-                Submit
-              </button> */}
-
           <BookingModal
             onClick={submitHandler}
             onSubmit={() => setInput(input)}
-            // onSubmit={submitHandler}
             ariaHideApp={false}
             time={time}
             date={date}

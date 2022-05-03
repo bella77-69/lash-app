@@ -8,24 +8,21 @@ import AuthOptions from "../Auth/AuthOptions";
 function Header() {
   return (
     <section className="header">
-      
       <div className="header-container">
-          <div className="header-logo"></div>
-       
+        <div className="header-logo"></div>
+
         <div className="header-img"></div>
-        </div>
-        <div className="header-social">
-          <Social />
-          {/* </div>
+      </div>
+      <div className="header-social">
+        <Social />
+        {/* </div>
           <div className="header-login"> */}
-          <div className="header-social__wrapper">
-            <AuthOptions />
+        <div className="header-social__wrapper">
+          <AuthOptions />
           {/* <LoginButton />
           <RegisterButton /> */}
-          </div>
         </div>
-        
-    
+      </div>
     </section>
   );
 }

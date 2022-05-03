@@ -5,25 +5,18 @@
     width: 100%;
 
     &-container {
-    // width: 100%;
-    // background-image: linear-gradient(rgba($black, 0.2), rgba($black, 0.2)),url('../../Assets/Images/hero4.jpg');
-    // background-repeat: no-repeat;
-     height: 30vh;
-    // background-position: center center;
-    // background-size: 100vw auto;
-    
+    height: 30vh;
     background: linear-gradient(rgba($black, 0.1), rgba($black, 0.1)), url('../../Assets/Images/main.jpg') center/cover;
- //   background: linear-gradient(rgba($black, 0.2), rgba($black, 0.2)), url('../../Assets/Images/hero4.jpg') center/cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
  
-     @include tablet {
+        @include tablet {
          height: 73vh;
-     }
+        }
 
-     @include desktop {
+        @include desktop {
          height: 116vh;
-     }
+        }
     }
 }

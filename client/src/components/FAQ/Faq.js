@@ -7,7 +7,10 @@ function Faq() {
   return (
     <section className="faq">
       <div className="faq-container">
-        <Title title=" Can I get my eyelash extensions wet right away?" className="faq-title"/>
+        <Title
+          title=" Can I get my eyelash extensions wet right away?"
+          className="faq-title"
+        />
 
         <p className="faq-answer one">
           It’s not ideal, but it’s okay to get your extensions wet in the first

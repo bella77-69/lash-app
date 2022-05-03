@@ -8,53 +8,53 @@
  align-items: center;
  background-color: $grey;
 
- &-title {
-     font-size: 1.25rem;
-     color: $font;
-     text-align: center;
-     font-weight: 700;
-     width: 70%;
+    &-title {
+    font-size: 1.25rem;
+    color: $font;
+    text-align: center;
+    font-weight: 700;
+    width: 70%;
+    }
+
+    &-subtitle {
+    font-size: 1.2rem;
+    color: $font;
+    text-align: center;
+    width: 70%;
+    font-style: oblique;
  }
 
- &-subtitle {
-     font-size: 1.2rem;
-     color: $font;
-     text-align: center;
-     width: 70%;
-     font-style: oblique;
- 
+    &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3;
+    font-size: 1.5rem;
+    color: $font;
+    font-weight: 500;
  }
 
- &-form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     line-height: 3;
-     font-size: 1.5rem;
-     color: $font;
-     font-weight: 500;
- }
+    &-input {
+    font-size: 1rem;
+    border-radius: .5rem;
+    border-color: $border;
+    width: 100%;
+    text-align: center;
+    }
 
- &-input {
-     font-size: 1rem;
-     border-radius: .5rem;
-     border-color: $border;
-     width: 100%;
-     text-align: center;
- }
+    &-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $font;
+    } 
 
- &-label {
-     font-size: 1.2rem;
-     font-weight: 600;
-     color: $font;
- } 
-
- &-review {
-     font-size: 1rem;
-     font-weight: 600;
-     font-style: oblique;
- }
- &-btn {
+    &-review {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: oblique;
+    }
+    
+    &-btn {
     margin-top: 2.5rem;
     margin-bottom: .9375rem;
     font-size: 1rem;
@@ -103,27 +103,27 @@
     font-size: 1rem;
     font-weight: 600;
     }
+
     &-btn {
-        margin-top: 2.5rem;
-        margin-bottom: .9375rem;
-        font-size: 1rem;
-        outline: none;
-        border-radius: .3125rem;
-        border: .1875rem solid transparent;
-        color: $font;
-        text-transform: uppercase;
-        margin-top: 1rem;
-        background-color: $white;
-        font-weight: 600;
-        letter-spacing: .125rem;
+    margin-top: 2.5rem;
+    margin-bottom: .9375rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: .3125rem;
+    border: .1875rem solid transparent;
+    color: $font;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background-color: $white;
+    font-weight: 600;
+    letter-spacing: .125rem;
     
-            &:hover {
-            opacity: 1 !important;
-            color: $white;
-            background: $font;
-            box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);
+        &:hover {
+        opacity: 1 !important;
+        color: $white;
+        background: $font;
+        box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);
       }
     }
-   
-    }
+}
 

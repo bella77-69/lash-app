@@ -18,18 +18,26 @@ function AuthOptions() {
   return (
     <nav className="container">
       {userData.user ? (
-        <button className="container-button container-button--logout" onClick={logout}>
+        <button
+          className="container-button container-button--logout"
+          onClick={logout}
+        >
           Logout
         </button>
       ) : (
         <>
-         <button className="container-button container-button--login" onClick={login}>
+          <button
+            className="container-button container-button--login"
+            onClick={login}
+          >
             Login
           </button>
-          <button className="container-button container-button--register" onClick={register}>
+          <button
+            className="container-button container-button--register"
+            onClick={register}
+          >
             Register
           </button>
-         
         </>
       )}
     </nav>

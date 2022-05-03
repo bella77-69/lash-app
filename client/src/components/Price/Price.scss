@@ -10,6 +10,7 @@
     align-items: center;
     width: 100%;
     }
+
     &-table {
     margin: 20px;
     display: block;
@@ -77,16 +78,7 @@
     display: block;
     padding: 10px 20px;
     margin:0;
-
-        // &:nth-child(2n) {
-        // background: linear-gradient(to left, $grey, $shade);
-        // }
-
-        // &:nth-child(2n+1) {
-        // background: linear-gradient(to left, #fff, $grey);
-        // }
-      }
-
+    }
 
     &-button {
     display: block;

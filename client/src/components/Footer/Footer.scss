@@ -5,71 +5,71 @@
 	margin: 0 auto;
 	width: 100%;
 
-	@include desktop {
-	padding: 55px 50px;
+		@include desktop {
+		padding: 55px 50px;
+		}
+
+	&-left{
+
+		@include tablet {
+		width: 50%;
+  		display: inline-block;
+		vertical-align: top;
+		padding: 0.75rem 2rem;
+		}
+
+		@include desktop {
+		margin-top: 5rem;
+		}
 	}
 
-&-left{
-
-	@include tablet {
-	width: 50%;
-  	display: inline-block;
-	vertical-align: top;
-	padding: 0.75rem 2rem;
-	}
-
-	@include desktop {
-	margin-top: 5rem;
-	}
-}
-
-&-logo{
+	&-logo{
 	padding-top: 1rem;
 	text-align: center;
 	color:  #b3adad;
 	font: normal 1.5rem 'Open Sans', cursive;
 	margin: 0;
 
-	@include tablet {
-	margin: 1rem;
-	font-size: 1.75rem;
-	}
+		@include tablet {
+		margin: 1rem;
+		font-size: 1.75rem;
+		}
 
-	@include desktop {
-	font-size: 2.5rem;
-	margin: 0;
-	}
+		@include desktop {
+		font-size: 2.5rem;
+		margin: 0;
+		}
 
-&__span{
+	&__span{
 	color: $highlight;
-}
-}
+	}
+	}
 
-&-img {
-  margin: 0;
-  width: 40%;
+	&-img {
+  	margin: 0;
+  	width: 40%;
 
-  	@include tablet {
-	width: 65%;
-	margin-left: 3rem;
-  	}
+  		@include tablet {
+		width: 65%;
+		margin-left: 3rem;
+  		}
   
-	@include desktop {
-    width: 70%;
-	margin-left: 6.5rem;
-  	}
-}
+		@include desktop {
+    	width: 70%;
+		margin-left: 6.5rem;
+  		}
+	}	
 
-&-links{
+	&-links{
 	text-align: center;
 
-	@include tablet {
-	text-align: left;
-	padding: 0;
+		@include tablet {
+		text-align: left;
+		padding: 0;
+		}
 	}
-}
 
-&-company{
+	&-company{
 	text-align: center;
 	color:  $font;
 	font-size: .75rem;
@@ -88,134 +88,104 @@
 		font-size: 1.187rem;
 		margin-top: -1rem;
   		}
-}
+		}
 
-&-center {
+	&-center {
 	margin: 1rem 0 0 3.75rem;
 	
-	@include tablet {
-  	display: inline-block;
-	vertical-align: top;
-	margin: 1rem;
-	padding: 0.75rem 2rem;
+		@include tablet {
+  		display: inline-block;
+		vertical-align: top;
+		margin: 1rem;
+		padding: 0.75rem 2rem;
+		}
+
+  		@include desktop {
+    	margin-top: 5rem;
+		width: 40%;
+  		}
 	}
 
-  	@include desktop {
-    margin-top: 5rem;
-	width: 40%;
-  }
-}
-
-&-info{
+	&-info{
 	display: inline-block;
 	color: $font;
   	font-weight:400;
 	vertical-align: middle;
 	margin: .75rem;
 
-
-
-	@include desktop {
-	font-size: 1.187rem;
+		@include desktop {
+		font-size: 1.187rem;
+			}
 	}
-}
 
-&-address{
+	&-address{
 	display:block;
 	font-weight: normal;
 	font-size: 14px;
 	line-height:2;
 
-	@include desktop {
-	font-size: 1.187rem;
+		@include desktop {
+		font-size: 1.187rem;
+		}
 	}
-}
 
-&-contact{
+	&-contact{
 	color:  $highlight;
 	text-decoration: none;;
-}
+	}
 
-&-right{
+	&-right{
 	margin: 1rem;
 
-	@include tablet {
-	padding: 0.75rem 2rem;
-	margin: 1.5rem;
-  	display: inline-block;
-	vertical-align: top;
-	}
+		@include tablet {
+		padding: 0.75rem 2rem;
+		margin: 1.5rem;
+  		display: inline-block;
+		vertical-align: top;
+		}
 
-	@include desktop {
-	width: 70%;
-	margin: 4rem;
-	}
-}
+		@include desktop {
+		width: 70%;
+		margin: 4rem;
+		}
+		}
 
-&-about{
-	//line-height: 20px;
+	&-about{
 	color:  $background;
 	font-size: .9375rem;
 	font-weight: 600;
 	margin-bottom: 1rem;
 
-	@include tablet {
-	font-size: 1rem;
+		@include tablet {
+		font-size: 1rem;
+		}
+
+		@include desktop {
+		font-size: 1.187rem;
+		}
 	}
 
-	@include desktop {
-	font-size: 1.187rem;
-	}
-}
-
-&-questions{
+	&-questions{
 	color: $font;
 	font-weight: 400;
 	font-size: .875rem;
 
-	@include tablet {
-	color:  $font;
-	font-size: .875rem;
+		@include tablet {
+		color:  $font;
+		font-size: .875rem;
+		}
+
+		@include desktop {
+		font-size: 1.187rem;
+		}
 	}
 
-	@include desktop {
-		font-size: 1.187rem;
-	}
-}
-&-social{
+	&-social{
 	margin-left: 1.75rem;
 
-
-	@include desktop {
-	padding: 10px;
+		@include desktop {
+		padding: 10px;
+		}
 	}
-
-//   &__media{
-//     display: inline-block;
-//     width: 35px;
-//     height: 35px;
-//     cursor: pointer;
-//   	background-color: $background;
-//     border-radius: 5px;
-  
-//     font-size: 20px;
-//     color: #ffffff;
-//     text-align: center;
-//     line-height: 35px;
-  
-//     margin-right: 3px;
-//     margin-bottom: 5px;
-//   }
-}
 }
 
-// @media (max-width: 1280px) {
-// 	.footer .footer-left,
-// 	.footer .footer-center,
-// 	.footer .footer-right{
-// 		display: block;
-// 		width: 100%;
-// 		margin-bottom: 40px;
-// 		text-align: center;
-// 	}
-// }

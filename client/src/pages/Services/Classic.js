@@ -36,25 +36,18 @@ export default class Classic extends Component {
           </p>
         </div>
         <div>
-        <div className="lash-faq">
-          <Link to="/services/faq" className="lash-link">
-            <button className="lash-btn">faq</button>
-          </Link>
-      
-          
+          <div className="lash-faq">
+            <Link to="/services/faq" className="lash-link">
+              <button className="lash-btn">faq</button>
+            </Link>
             <Link to="/">
               <button className="lash-btn">Back to Homepage</button>
             </Link>
-          
-        
             <Link to="/services">
               <button className="lash-btn">Back to Services Page</button>
             </Link>
-         
           </div>
         </div>
-
-       
       </section>
     );
   }

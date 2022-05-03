@@ -40,17 +40,12 @@ function Volume(props) {
           <Link to="/services/faq" className="lash-link">
             <button className="lash-btn">faq</button>
           </Link>
-      
-          
             <Link to="/">
               <button className="lash-btn">Back to Homepage</button>
-            </Link>
-          
-        
+            </Link>    
             <Link to="/services">
               <button className="lash-btn">Back to Services Page</button>
             </Link>
-         
           </div>
         </div>
     </section>

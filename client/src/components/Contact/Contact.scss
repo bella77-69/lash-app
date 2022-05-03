@@ -6,23 +6,24 @@
     &-title {
         text-align: center;
     }
-&-form {
+
+    &-form {
     max-width: 600px;
     text-align: center;
     margin: 20px auto;
-  }
+    }
 
-&-half {
+    &-half {
     float: left;
     width: 48%;
     margin-bottom: 1em;
-  }
+    }
 
-&-left {
+    &-left {
     margin-right: 2%; 
-}
+    }
 
-&-input, &-textarea {
+    &-input, &-textarea {
     border: .0313rem solid $font; 
     padding: 1rem;
     border-radius: .5rem;
@@ -35,16 +36,17 @@
     box-shadow: 0 0px 2px rgba($font, 1)!important;
      }
    }
-&-right {
+
+    &-right {
     width: 50%; 
     }
 
-&-textarea {
+    &-textarea {
     height: 126px;
     resize: none;
     }
 
-&-submit {
+    &-submit {
     color: white; 
     background: $font;
     cursor: pointer;
@@ -56,27 +58,27 @@
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     resize: none;
      
-    &:hover {
-    box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);   
+        &:hover {
+        box-shadow: 0 1px 1px 1px rgba(#aaa, 0.9);   
+        }
     }
-}
 
-&-details {
+    &-details {
     text-align: center;
-}
+    }
 
-&-btn {
+    &-btn {
     text-decoration: none;
     border: 2px solid $font;
     border-radius: .5rem;
     padding: .3125rem;
-}
+    }
 
  @media (max-width: 480px) {
    .contact-half {
-      width: 100%; 
-      float: none;
-      margin-bottom: 0; 
+    width: 100%; 
+    float: none;
+    margin-bottom: 0; 
    }
  }
 }

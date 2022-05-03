@@ -1,49 +1,48 @@
 @import '../../styles/mixins';
 
 .services {
-    padding: 1.5rem 0.5rem 6.5rem;
-    background: $white;
-    text-align: center;
-  	background: $white;
+  padding: 1.5rem 0.5rem 6.5rem;
+  background: $white;
+  text-align: center;
+  background: $white;
 
   &-center {
-    width: 90vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    grid-row-gap: 2rem;
-    grid-column-gap: 50px;
- 
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
   }
 
   &-container {
-    background-color: $active;
-    border-radius: .5rem;
-    box-shadow:3px 4px 5px 2px $shade;
-    padding: 1.25rem;
+  background-color: $active;
+  border-radius: .5rem;
+  box-shadow:3px 4px 5px 2px $shade;
+  padding: 1.25rem;
   }
 
   &-icon {
-    display: inline-block;
-    color: $font;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+  display: inline-block;
+  color: $font;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   }
 
-   &-title {
-    letter-spacing: .187rem;
-    font-size: 1.125rem;
+  &-title {
+  letter-spacing: .187rem;
+  font-size: 1.125rem;
   }
 
   &-info {
-    width: 95%;
-    margin: 0 auto;
-    font-size: 1.125rem;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1.125rem;
   }
 
   &-link {
-      text-decoration: none;
-      color: $font;
+  text-decoration: none;
+  color: $font;
   }
 
   @media screen and (min-width: 992px) {

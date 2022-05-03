@@ -1,91 +1,6 @@
 @import '../../styles/mixins';
 
-// .menu{
-//     color: rgb(14, 13, 13);
-
-//     &-item {
-//     text-decoration: none;
-//     color:rgb(14, 13, 13);
-//     }
-// }
-
-/* Position and sizing of burger button */
-// .bm-burger-button {
-//     position: fixed;
-//     width: .875rem;
-//     height: .8125rem;
-//     left: 1.0625rem;
-//     top: 1.125rem;
-
-//       @include tablet {
-//         position: fixed;
-//         width: 2.25rem;
-//         height: 1.875rem;
-//         left: 2.25rem;
-//         top: 2.25rem;
-//       }
-//   }
-  
-//   /* Color/shape of burger icon bars */
-//   .bm-burger-bars {
-//     background: $font;
-//   }
-  
-//   /* Color/shape of burger icon bars on hover*/
-//   .bm-burger-bars-hover {
-//     background: $font;
-//   }
-  
-//   /* Position and sizing of clickable cross button */
-//   .bm-cross-button {
-//     height: 24px;
-//     width: 24px;
-//   }
-  
-//   /* Color/shape of close button cross */
-//   .bm-cross {
-//     background: #bdc3c7;
-//   }
-  
-//   /*
-//   Sidebar wrapper styles
-//   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-//   */
-//   .bm-menu-wrap {
-//     position: fixed;
-//     height: 100%;
-//   }
-  
-//   /* General sidebar styles */
-//   .bm-menu {
-//     background: $font;
-//     padding: 2.5em 1.5em 0;
-//     font-size: 1.15em;
-//   }
-  
-//   /* Morph shape necessary with bubble or elastic */
-//   .bm-morph-shape {
-//     fill: #373a47;
-//   }
-  
-//   /* Wrapper for item list */
-//   .bm-item-list {
-//     color: #b8b7ad;
-//     padding: 0.8em;
-//   }
-  
-//   /* Individual item */
-//   .bm-item {
-//     display: inline-block;
-//   }
-  
-//   /* Styling of overlay */
-//   .bm-overlay {
-//     background: rgba(0, 0, 0, 0.3);
-//   }
-
   .nav {
-    // position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -152,26 +67,37 @@
     height: 250px;
     padding: 0;
   }
+
   @media screen and (min-width: 768px) {
     .nav-btn {
       display: none;
-    
     }
+
     .nav-center {
-      // max-width: 1480px;
       margin: 0 auto;
       display: flex;
+      padding-left: 1.5rem;
 
       @include tablet {
-        align-items: flex-start;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      }
+
+      @include desktop {
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
       }
     }
+
     .nav-links {
       height: auto;
       display: flex;
-      margin-left: 1.5rem;
-      
+      padding: 0;
     }
+
     .nav-links a {
       margin: 0 1rem;
       padding: 0.5rem 0;
