@@ -16,7 +16,6 @@ Bella Lashes Inc. was built using these technologies:
 - React-Icons
 - Mongoose
 - MongoDB
-- Bootstrap
 - React-Calendar
 - React-Modal
 
