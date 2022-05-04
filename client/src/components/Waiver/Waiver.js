@@ -158,7 +158,7 @@ export default function Waiver() {
         {error && <div>{error}</div>}
         <Link to="/">
           <Button className="waiver-btn" onClick={submitWaiver}>
-            Book Appointment (Waiver com)
+            Book Appointment
           </Button>
         </Link>
       </form>
