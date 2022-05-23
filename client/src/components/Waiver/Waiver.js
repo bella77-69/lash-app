@@ -52,7 +52,7 @@ export default function Waiver() {
     event.preventDefault();
     if (validateInput()) {
       axios
-        .post(`/waiver/add`, waiverInput)
+        .post(`https://git.heroku.com/lash-app-server.git/waiver/add`, waiverInput)
         .then((response) => {
           console.log("success adding waiver:", response);
           setWaiverInput({
