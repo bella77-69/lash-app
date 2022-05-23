@@ -35,7 +35,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
     event.preventDefault();
     if (validateInput()) {
       axios
-        .post(`https://git.heroku.com/lash-app-server.git/appointment/add`, input)
+        .post(`https://lash-app-server.git/appointment/add`, input)
         .then((response) => {
           console.log("success adding appointment:", response);
           setInput({
