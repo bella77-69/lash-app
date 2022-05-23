@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middleware/auth');
-const Waiver = require('../models/waiver.model');
+const Waiver = require('../../models/waiver.model');
 
 router.get("/", function (req, res) {
     try {

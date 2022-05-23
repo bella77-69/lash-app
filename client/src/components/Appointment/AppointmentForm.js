@@ -12,7 +12,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
     date: date.toDateString(),
   });
   const [error, setError] = useState("");
-  const baseUrl = "http://localhost:5000";
+  //const baseUrl = "http://localhost:5000";
 
   const changeHandler = (event) => {
     setError("");
@@ -35,7 +35,7 @@ const AppointmentForm = ({ date, time, modalIsOpen }) => {
     event.preventDefault();
     if (validateInput()) {
       axios
-        .post(`${baseUrl}/appointment/add`, input)
+        .post(`/appointment/add`, input)
         .then((response) => {
           console.log("success adding appointment:", response);
           setInput({

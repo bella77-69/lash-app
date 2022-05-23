@@ -19,7 +19,7 @@ export default function Waiver() {
   });
   const history = useHistory();
   const [error, setError] = useState(true);
-  const baseUrl = "http://localhost:5000";
+  //const baseUrl = "http://localhost:5000";
 
   const changeHandler = (event) => {
     setError("");
@@ -52,7 +52,7 @@ export default function Waiver() {
     event.preventDefault();
     if (validateInput()) {
       axios
-        .post(`${baseUrl}/waiver/add`, waiverInput)
+        .post(`/waiver/add`, waiverInput)
         .then((response) => {
           console.log("success adding waiver:", response);
           setWaiverInput({
