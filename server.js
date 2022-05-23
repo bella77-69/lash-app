@@ -19,8 +19,8 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
-const db = require("./config/keys").mongoURI;
-
+// const db = require("./config/keys").mongoURI;
+const db = process.env.MONGODB_URI;
 // set up mongoose
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
