@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middleware/auth');
-const Appointment = require('../../models/appointment.model');
+const Appointment = require('../models/appointment.model');
 
 router.get("/", function (req, res) {
    try {
