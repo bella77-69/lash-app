@@ -28,3 +28,7 @@ Bella Lashes Inc. was built using these technologies:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7059f14ae75d1e2e6e9e34fd2c8bd23ba42c62c
